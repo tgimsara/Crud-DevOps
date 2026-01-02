@@ -638,7 +638,7 @@
        
         <div class="resource-table-container">
             <div class="glass-card">
-                <h4 class="text-white mb-4"><i class="fas fa-table me-2"></i>Resource Allocation & Usage</h4>
+                <h4 class="text-white mb-4">Resource Allocation & Usage</h4>
                 <div class="table-responsive">
                     <table class="table table-glass">
                         <thead>
@@ -743,7 +743,7 @@
             <div class="row g-4">
                 <div class="col-lg-6">
                     <div class="glass-card">
-                        <h5 class="text-white mb-3"><i class="fas fa-chart-pie me-2"></i>Resource Distribution</h5>
+                        <h5 class="text-white mb-3">Resource Distribution</h5>
                         <div class="chart-container">
                             <canvas id="pieChart"></canvas>
                         </div>
@@ -763,7 +763,7 @@
        
         <div class="tips-container">
             <div class="glass-card">
-                <h4 class="text-white mb-4"><i class="fas fa-lightbulb me-2"></i>Smart Sustainability Suggestions</h4>
+                <h4 class="text-white mb-4"></i>Smart Sustainability Suggestions</h4>
                 <div class="tip-card d-flex align-items-center">
                     <i class="fas fa-file-pdf"></i>
                     <div class="tip-text">
@@ -793,7 +793,7 @@
 
        
         <div class="glass-card mt-4">
-            <h4 class="text-white mb-3"><i class="fas fa-globe me-2"></i>SDG Alignment</h4>
+            <h4 class="text-white mb-3">SDG Alignment</h4>
             <div class="row g-3">
                 <div class="col-md-4">
                     <div class="tip-card text-center">
