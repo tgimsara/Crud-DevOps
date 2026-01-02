@@ -444,6 +444,76 @@ document.addEventListener('DOMContentLoaded', function() {
            });
 
 
+                 function addResource() {
+                 const form = document.getElementById('addResourceForm');
+                 if (form.checkValidity()) {
+                
+                const resourceName = document.getElementById('resourceName').value;
+                const resourceType = document.getElementById('resourceType').value;
+                const initiative = document.getElementById('initiative').value;
+                const allocatedLimit = document.getElementById('allocatedLimit').value;
+                const usedAmount = document.getElementById('usedAmount').value;
+                
+                
+                const usagePercent = Math.floor(Math.random() * 100);
+                
+               
+                     let statusClass, statusIcon, statusText;
+                    if (usagePercent < 80) {
+                    statusClass = 'status-safe';
+                    statusIcon = 'fas fa-check-circle';
+                    statusText = 'Safe';
+                    } else if (usagePercent < 100) {
+                    statusClass = 'status-warning';
+                    statusIcon = 'fas fa-exclamation-triangle';
+                    statusText = 'Warning';
+                     } else {
+                    statusClass = 'status-danger';
+                    statusIcon = 'fas fa-exclamation-circle';
+                    statusText = 'Overuse';
+                     }
+
+               
+                     const typeIcons = {
+                    'Financial': '💰',
+                    'Material': '📦',
+                    'Energy': '⚡',
+                    'Human': '⏱',
+                    'Water': '🚿'
+                      };
+
+                
+                          const tableBody = document.getElementById('resourceTableBody');
+                         const newRow = `
+                        <tr style="animation: fadeIn 0.5s ease;">
+                        <td><i class="fas fa-cube me-2"></i>${resourceName}</td>
+                        <td><span class="badge" style="background: rgba(59, 130, 246, 0.2); color: #60a5fa;">${typeIcons[resourceType]} ${resourceType}</span></td>
+                        <td>${initiative}</td>
+                        <td>${usedAmount}</td>
+                        <td>${allocatedLimit}</td>
+                        <td>${usagePercent}%</td>
+                        <td><span class="status-badge ${statusClass}"><i class="${statusIcon}"></i>${statusText}</span></td>
+                        <td>
+                            <button class="btn-action btn-edit"><i class="fas fa-edit"></i></button>
+                            <button class="btn-action btn-delete" onclick="deleteRow(this)"><i class="fas fa-trash"></i></button>
+                        </td>
+                    </tr>
+                `;
+                tableBody.insertAdjacentHTML('beforeend', newRow);
+
+                
+                form.reset();
+                const modal = bootstrap.Modal.getInstance(document.getElementById('addResourceModal'));
+                modal.hide();
+
+                
+                showToast('Resource added successfully!', 'success');
+            } else {
+                form.reportValidity();
+            }
+        }
+
+
 
         
     </script>   
