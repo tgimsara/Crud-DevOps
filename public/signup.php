@@ -26,11 +26,21 @@
                     <div class="glass-card">
                         <div class="card-body p-4 p-md-5">
                             <div class="text-center mb-4">
-                                <h2 class="welcome-text"> Welcome Back </h2>
-                                <p class="subtitle"> Sign in to continue to your account </p>
+                                <h2 class="welcome-text">Sign Up </h2>
+                                <p class="subtitle"> Create New account </p>
                             </div>
 
                             <form id="loginForm" class="auth-form" style="display: block;">
+                                <div class="mb-3">
+                                    <label for="Full name" class="form-label">Full Name</label>
+                                    <div  class="input-group">
+                                        <span class="input-icon">
+                                            <i class="fas fa-envelope"></i>
+                                        </span>
+                                        <input  type="name"  class="form-control glass-input" id="name" name="email" placeholder="Enter your full name" required>
+                                    </div>
+                                </div>
+
                                 <div class="mb-3">
                                     <label for="loginEmail" class="form-label">Email Address</label>
                                     <div  class="input-group">
@@ -53,6 +63,22 @@
                                         </span>
                                     </div>
                                 </div>
+                                
+
+                                <div class="mb-3">
+                                    <label for="ConfirmPassword" class="form-label">Confirm Password</label>
+                                    <div class="input-group">
+                                        <span class="input-icon">
+                                            <i class="fas fa-lock"></i>
+                                        </span>
+                                        <input type="password" class="form-control glass-input" id="newPassword" name="password" placeholder="confirm your password" required>
+                                        <span class="password-toggle" onclick="togglePassword('loginPassword')">
+                                            <i class="fas fa-eye"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                
+
                                 
                                 <div class="d-flex justify-content-between align-items-center mb-4">
                                     <div class="form-check">
