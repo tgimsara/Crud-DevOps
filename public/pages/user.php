@@ -61,3 +61,26 @@
             </a>
         </nav>
     </div>
+
+    <div class="main-content">
+       
+        <header class="top-header glass-effect">
+            <div class="search-bar glass-input">
+                <i class="bi bi-search"></i>
+                <input type="text" placeholder="Search anything">
+                <div class="search-glow"></div>
+            </div>
+            <div class="header-actions">
+                <button class="btn-icon glass-button">
+                    <i class="bi bi-bell"></i>
+                    <span class="notification-dot"></span>
+                </button>
+                <div class="user-profile-header glass-button">
+                    <img src="https://i.pravatar.cc/150?img=12" alt="Justin Mark">
+                    <span>Justin Mark</span>
+                </div>
+                <button class="btn-icon glass-button">
+                    <i class="bi bi-three-dots-vertical"></i>
+                </button>
+            </div>
+        </header>
