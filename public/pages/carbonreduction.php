@@ -77,14 +77,15 @@
         }
 
         @media (max-width: 768px) {
-            .columns {
-                column-count: 1;
-            }
+    .columns {
+        grid-template-columns: 1fr;
+    }
 
-            h1 {
-                font-size: 28px;
-            }
-        }
+    h1 {
+        font-size: 28px;
+    }
+}
+
     </style>
     
 
