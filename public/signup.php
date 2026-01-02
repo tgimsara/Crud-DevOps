@@ -91,7 +91,7 @@
                                 </div>
 
                                  <button type="submit" class="btn btn-primary glass-btn w-100 mb-3">
-                                     <i class="fas fa-sign-in-alt me-2"></i> Sign In
+                                     <i class="fas fa-sign-in-alt me-2"></i> Sign Up
                                 </button>
                                 
                                 <div class="divider">
@@ -102,11 +102,7 @@
                                      <i class="fab fa-google me-2"></i> Continue with Google
                                 </button>
                                 
-                                <div class="text-center mt-4">
-                                     <p class="switch-text"> Don't have an account? 
-                                        <a href="" onclick="switchForm('signup')" class="switch-link">Sign Up</a>
-                                    </p>
-                                </div>
+                                
                             </form>
 
                             <form id="signupForm" class="auth-form" style="display: none;">
