@@ -319,6 +319,86 @@
             transform: scale(1.1);
         }
 
+        .tips-container {
+            margin-top: 40px;
+            animation: fadeIn 1.8s ease;
+        }
+
+        .tip-card {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.15) 0%, rgba(5, 150, 105, 0.15) 100%);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .tip-card:hover {
+            transform: translateX(10px);
+            border-color: rgba(16, 185, 129, 0.5);
+        }
+
+        .tip-card i {
+            color: #6ee7b7;
+            font-size: 1.3rem;
+            margin-right: 15px;
+        }
+
+        .tip-card .tip-text {
+            color: #fff;
+            font-size: 1rem;
+        }
+
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInDown {
+            from { 
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes scaleIn {
+            from { 
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to { 
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+
+        
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 2rem;
+            }
+            .page-header .subtitle {
+                font-size: 1rem;
+            }
+            .table-responsive {
+                font-size: 0.85rem;
+            }
+            .summary-card .value {
+                font-size: 1.5rem;
+            }
+        }
+
 
         </style>
 
