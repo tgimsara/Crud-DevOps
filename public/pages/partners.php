@@ -123,6 +123,62 @@
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
             letter-spacing: 0.5px;
         }
+        .glass-divider {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+            margin: 60px auto;
+            max-width: 300px;
+        }
+
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .section-header h2 {
+                font-size: 1.5rem;
+                padding: 12px 30px;
+            }
+
+            .partner-image-wrapper {
+                width: 150px;
+                height: 150px;
+            }
+
+            .partner-name {
+                font-size: 1.1rem;
+            }
+        }
+
+        .floating-shapes {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .shape {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+            animation: float 20s infinite ease-in-out;
+        }
+
+        .shape:nth-child(1) { width: 80px; height: 80px; top: 10%; left: 10%; animation-delay: 0s; }
+        .shape:nth-child(2) { width: 60px; height: 60px; top: 70%; left: 80%; animation-delay: 2s; }
+        .shape:nth-child(3) { width: 100px; height: 100px; top: 40%; left: 70%; animation-delay: 4s; }
+        .shape:nth-child(4) { width: 50px; height: 50px; top: 80%; left: 20%; animation-delay: 6s; }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) translateX(0); }
+            25% { transform: translateY(-30px) translateX(20px); }
+            50% { transform: translateY(-60px) translateX(-20px); }
+            75% { transform: translateY(-30px) translateX(30px); }
+        }
     </style>
 
 </head>
