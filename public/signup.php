@@ -101,6 +101,11 @@
                                 <button type="button" class="btn btn-google glass-btn w-100 mb-3" onclick="googleLogin()">
                                      <i class="fab fa-google me-2"></i> Continue with Google
                                 </button>
+                                <div class="text-center mt-4">
+                                    <p class="switch-text"> Already have an account? 
+                                        <a href="login.php" onclick="switchForm('login')" class="switch-link">Sign In</a>
+                                    </p>
+                                </div>
                                 
                                 
                             </form>
