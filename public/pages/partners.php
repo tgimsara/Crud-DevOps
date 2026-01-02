@@ -43,6 +43,18 @@
             margin-bottom: 40px;
             position: relative;
         }
+        .section-header h2 {
+            color: #fff;
+            font-size: 2.2rem;
+            font-weight: 600;
+            display: inline-block;
+            padding: 15px 40px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 50px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
     </style>
 
 </head>
