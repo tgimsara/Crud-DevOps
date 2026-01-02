@@ -266,7 +266,7 @@
             document.querySelectorAll('.partner-card').forEach(card => {
                 observer.observe(card);
             });
-             // Add parallax effect to floating shapes
+            
              document.addEventListener('mousemove', function(e) {
                 const shapes = document.querySelectorAll('.shape');
                 const mouseX = e.clientX / window.innerWidth;
