@@ -33,6 +33,49 @@
                                     </div>
                                 </div>
 
+                                <div class="mb-3">
+                                    <label for="loginPassword" class="form-label">Password</label>
+                                    <div class="input-group">
+                                        <span class="input-icon">
+                                            <i class="fas fa-lock"></i>
+                                        </span>
+                                        <input type="password" class="form-control glass-input" id="loginPassword" name="password" placeholder="Enter your password" required>
+                                        <span class="password-toggle" onclick="togglePassword('loginPassword')">
+                                            <i class="fas fa-eye"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                
+                                <div class="d-flex justify-content-between align-items-center mb-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="rememberMe">
+                                        <label class="form-check-label" for="rememberMe">
+                                            Remember me
+                                        </label>
+                                    </div>
+                                    <a href=" " class="forgot-link"> Forgot Password? </a>
+                                </div>
+
+                                 <button type="submit" class="btn btn-primary glass-btn w-100 mb-3">
+                                     <i class="fas fa-sign-in-alt me-2"></i> Sign In
+                                </button>
+                                
+                                <div class="divider">
+                                     <span> OR </span>
+                                </div>
+                                
+                                <button type="button" class="btn btn-google glass-btn w-100 mb-3" onclick="googleLogin()">
+                                     <i class="fab fa-google me-2"></i> Continue with Google
+                                </button>
+                                
+                                <div class="text-center mt-4">
+                                     <p class="switch-text"> Don't have an account? 
+                                        <a href="" onclick="switchForm('signup')" class="switch-link">Sign Up</a>
+                                    </p>
+                                </div>
+                            </form>
+                                
+
 
     
 
