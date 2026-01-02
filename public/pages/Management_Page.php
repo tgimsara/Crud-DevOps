@@ -392,7 +392,58 @@
             <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
     <script>
 
+document.addEventListener('DOMContentLoaded', function() {
+           
+           const pieCtx = document.getElementById('pieChart').getContext('2d');
+           const pieChart = new Chart(pieCtx, {
+               type: 'doughnut',
+               data: {
+                   labels: ['Financial', 'Materials', 'Energy', 'Human Effort', 'Water'],
+                   datasets: [{
+                       data: [120000, 450, 320, 240, 800],
+                       backgroundColor: [
+                           'rgba(16, 185, 129, 0.8)',
+                           'rgba(59, 130, 246, 0.8)',
+                           'rgba(251, 191, 36, 0.8)',
+                           'rgba(139, 92, 246, 0.8)',
+                           'rgba(6, 182, 212, 0.8)'
+                       ],
+                       borderColor: [
+                           'rgba(16, 185, 129, 1)',
+                           'rgba(59, 130, 246, 1)',
+                           'rgba(251, 191, 36, 1)',
+                           'rgba(139, 92, 246, 1)',
+                           'rgba(6, 182, 212, 1)'
+                       ],
+                       borderWidth: 2
+                   }]
+               },
+               options: {
+                   responsive: true,
+                   maintainAspectRatio: false,
+                   plugins: {
+                       legend: {
+                           position: 'bottom',
+                           labels: {
+                               color: '#fff',
+                               padding: 15,
+                               font: {
+                                   size: 12
+                               }
+                           }
+                       },
+                       tooltip: {
+                           backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                           titleColor: '#fff',
+                           bodyColor: '#fff',
+                           borderColor: 'rgba(255, 255, 255, 0.2)',
+                           borderWidth: 1
+                       }
+                   }
+               }
+           });
 
+           
 
         
     </script>   
