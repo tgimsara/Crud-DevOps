@@ -162,7 +162,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
      <script src="js/login.js"></script>
      <script>
-        // Login Form Submit
+       
 document.getElementById('loginForm').addEventListener('submit', function(e) {
     e.preventDefault();
     
@@ -176,14 +176,14 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
     .then(data => {
         if (data.success) {
             alert(data.message);
-            window.location.href = 'dashboard.php'; // redirect to dashboard
+            window.location.href = 'index.php'; 
         } else {
             alert(data.message);
         }
     });
 });
 
-// Signup Form Submit
+
 document.getElementById('signupForm').addEventListener('submit', function(e) {
     e.preventDefault();
     
