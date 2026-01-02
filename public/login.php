@@ -4,9 +4,16 @@
    
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+
 
    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    
+    <link rel="stylesheet" href="css/login.css">
 
     <title>Login</title>
   </head>
@@ -74,14 +81,82 @@
                                     </p>
                                 </div>
                             </form>
+
+                            <form id="signupForm" class="auth-form" style="display: none;">
+                                <div class="mb-3">
+                                    <label for="signupName" class="form-label">Full Name</label>
+                                    <div class="input-group">
+                                        <span class="input-icon">
+                                            <i class="fas fa-user"></i>
+                                        </span>
+                                         <input type="text" class="form-control glass-input" id="signupName" name="name" placeholder="Enter your full name" required>
+                                    </div>
+                                </div>
                                 
+                                <div class="mb-3">
+                                    <label for="signupEmail" class="form-label">Email Address</label>
+                                    <div class="input-group">
+                                        <span class="input-icon">
+                                            <i class="fas fa-envelope"></i>
+                                        </span>
+                                         <input type="email" class="form-control glass-input" id="signupEmail" name="email" placeholder="Enter your email" required>
+                                    </div>
+                                </div>
 
+                                <div class="mb-3">
+                                    <label for="signupPassword" class="form-label">Password</label>
+                                    <div class="input-group">
+                                        <span class="input-icon">
+                                            <i class="fas fa-lock"></i>
+                                        </span>
+                                        <input type="password" class="form-control glass-input" id="signupPassword" name="password" placeholder="Create a password" required>
+                                        <span class="password-toggle" onclick="togglePassword('signupPassword')">
+                                            <i class="fas fa-eye"></i>
+                                        </span>
+                                    </div>
+                                </div>
 
-    
+                                <div class="mb-3">
+                                    <label for="signupPassword" class="form-label">Password</label>
+                                    <div class="input-group">
+                                        <span class="input-icon">
+                                            <i class="fas fa-lock"></i>
+                                        </span>
+                                        <input type="password" class="form-control glass-input" id="signupPassword" name="password" placeholder="Create a password" required>
+                                        <span class="password-toggle" onclick="togglePassword('signupPassword')">
+                                            <i class="fas fa-eye"></i>
+                                        </span>
+                                    </div>
+                                </div>
 
+                                <button type="submit" class="btn btn-primary glass-btn w-100 mb-3">
+                                    <i class="fas fa-user-plus me-2"></i> Create Account
+                                </button>
+                                
+                                <div class="divider">
+                                    <span> OR </span>
+                                </div>
+                                
+                                <button type="button" class="btn btn-google glass-btn w-100 mb-3" onclick="googleLogin()">
+                                    <i class="fab fa-google me-2"></i> Sign up with Google
+                                </button>
+                                
+                                <div class="text-center mt-4">
+                                    <p class="switch-text"> Already have an account? 
+                                        <a href="#" onclick="switchForm('login')" class="switch-link">Sign In</a>
+                                    </p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+                        
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
+     <script src="js/login.js"></script>
    
   </body>
 </html>
