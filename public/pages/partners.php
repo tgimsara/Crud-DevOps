@@ -34,7 +34,7 @@
                                 <circle cx="32" cy="24" r="8" fill="#fff" fill-opacity="0.25" stroke="#fff" stroke-width="2"/>
                             </svg>
                         </div>
-                        <h3 class="partner-name">Tech Solutions Inc</h3>
+                        <h3 class="partner-name">User1</h3>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-6">
@@ -46,7 +46,7 @@
                                 <circle cx="32" cy="24" r="8" fill="#fff" fill-opacity="0.25" stroke="#fff" stroke-width="2"/>
                             </svg>
                         </div>
-                        <h3 class="partner-name">Green Energy Co</h3>
+                        <h3 class="partner-name">User2</h3>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-6">
@@ -58,7 +58,7 @@
                                 <circle cx="32" cy="24" r="8" fill="#fff" fill-opacity="0.25" stroke="#fff" stroke-width="2"/>
                             </svg>
                         </div>
-                        <h3 class="partner-name">Digital Media Group</h3>
+                        <h3 class="partner-name">User3</h3>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-6">
@@ -70,7 +70,7 @@
                                 <circle cx="32" cy="24" r="8" fill="#fff" fill-opacity="0.25" stroke="#fff" stroke-width="2"/>
                             </svg>
                         </div>
-                        <h3 class="partner-name">Urban Developers</h3>
+                        <h3 class="partner-name">User4</h3>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-6">
@@ -82,7 +82,7 @@
                                 <circle cx="32" cy="24" r="8" fill="#fff" fill-opacity="0.25" stroke="#fff" stroke-width="2"/>
                             </svg>
                         </div>
-                        <h3 class="partner-name">Healthcare Plus</h3>
+                        <h3 class="partner-name">User5</h3>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-6">
@@ -94,7 +94,7 @@
                                 <circle cx="32" cy="24" r="8" fill="#fff" fill-opacity="0.25" stroke="#fff" stroke-width="2"/>
                             </svg>
                         </div>
-                        <h3 class="partner-name">Education First</h3>
+                        <h3 class="partner-name">User6</h3>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-6">
@@ -106,7 +106,7 @@
                                 <circle cx="32" cy="24" r="8" fill="#fff" fill-opacity="0.25" stroke="#fff" stroke-width="2"/>
                             </svg>
                         </div>
-                        <h3 class="partner-name">Finance Partners</h3>
+                        <h3 class="partner-name">User7</h3>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-6">
@@ -118,7 +118,7 @@
                                 <circle cx="32" cy="24" r="8" fill="#fff" fill-opacity="0.25" stroke="#fff" stroke-width="2"/>
                             </svg>
                         </div>
-                        <h3 class="partner-name">Retail Innovations</h3>
+                        <h3 class="partner-name">User8</h3>
                     </div>
                 </div>
             </div>
@@ -140,7 +140,7 @@
                         <circle cx="32" cy="24" r="8" fill="#fff" fill-opacity="0.25" stroke="#fff" stroke-width="2"/>
                     </svg>
                 </div>
-                <h3 class="partner-name">Global Tech Europe</h3>
+                <h3 class="partner-name">User1</h3>
             </div>
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6">
@@ -152,7 +152,7 @@
                         <circle cx="32" cy="24" r="8" fill="#fff" fill-opacity="0.25" stroke="#fff" stroke-width="2"/>
                     </svg>
                 </div>
-                <h3 class="partner-name">Asia Pacific Systems</h3>
+                <h3 class="partner-name">User2</h3>
             </div>
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6">
@@ -164,7 +164,7 @@
                         <circle cx="32" cy="24" r="8" fill="#fff" fill-opacity="0.25" stroke="#fff" stroke-width="2"/>
                     </svg>
                 </div>
-                <h3 class="partner-name">Americas Consulting</h3>
+                <h3 class="partner-name">User3</h3>
             </div>
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6">
@@ -176,7 +176,7 @@
                         <circle cx="32" cy="24" r="8" fill="#fff" fill-opacity="0.25" stroke="#fff" stroke-width="2"/>
                     </svg>
                 </div>
-                <h3 class="partner-name">Middle East Ventures</h3>
+                <h3 class="partner-name">User4</h3>
             </div>
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6">
@@ -188,7 +188,7 @@
                         <circle cx="32" cy="24" r="8" fill="#fff" fill-opacity="0.25" stroke="#fff" stroke-width="2"/>
                     </svg>
                 </div>
-                <h3 class="partner-name">Oceania Networks</h3>
+                <h3 class="partner-name">User5</h3>
             </div>
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6">
@@ -200,7 +200,7 @@
                         <circle cx="32" cy="24" r="8" fill="#fff" fill-opacity="0.25" stroke="#fff" stroke-width="2"/>
                     </svg>
                 </div>
-                <h3 class="partner-name">European Union Ltd</h3>
+                <h3 class="partner-name">User6</h3>
             </div>
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6">
@@ -212,7 +212,7 @@
                         <circle cx="32" cy="24" r="8" fill="#fff" fill-opacity="0.25" stroke="#fff" stroke-width="2"/>
                     </svg>
                 </div>
-                <h3 class="partner-name">African Growth Corp</h3>
+                <h3 class="partner-name">User7</h3>
             </div>
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6">
@@ -224,6 +224,11 @@
                         <circle cx="32" cy="24" r="8" fill="#fff" fill-opacity="0.25" stroke="#fff" stroke-width="2"/>
                     </svg>
                 </div>
+                <h3 class="partner-name">User8</h3>
+            </div>
+        </div>
+    </div>
+</div>
                 <h3 class="partner-name">Nordic Enterprises</h3>
             </div>
         </div>
@@ -231,6 +236,17 @@
 </div>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Add smooth scroll behavior
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animate cards on scroll
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
 
+</script>
 </body>
 </html>
