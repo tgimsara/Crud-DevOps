@@ -511,6 +511,13 @@ document.addEventListener('DOMContentLoaded', function() {
             } else {
                 form.reportValidity();
             }
+        } function deleteRow(button) {
+            if (confirm('Are you sure you want to delete this resource?')) {
+                const row = button.closest('tr');
+                row.style.animation = 'fadeOut 0.5s ease';
+                setTimeout(() => row.remove(), 500);
+                showToast('Resource deleted successfully!', 'danger');
+            }
         }
 
 
