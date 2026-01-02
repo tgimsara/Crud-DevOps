@@ -55,7 +55,7 @@ function showAlert(message, type) {
 
 document.addEventListener('DOMContentLoaded', function() {
     const loginForm = document.getElementById('loginForm');
-}
+    
     if (loginForm) {
         loginForm.addEventListener('submit', function(e) {
             e.preventDefault();
@@ -63,17 +63,21 @@ document.addEventListener('DOMContentLoaded', function() {
             const email = document.getElementById('loginEmail').value;
             const password = document.getElementById('loginPassword').value;
             const rememberMe = document.getElementById('rememberMe').checked;
-
+            
+          
             if (!email || !password) {
                 showAlert('Please fill in all fields', 'danger');
                 return;
             }
-
-             if (!isValidEmail(email)) {
+            
+            
+            if (!isValidEmail(email)) {
                 showAlert('Please enter a valid email address', 'danger');
                 return;
             }
-             const formData = new FormData();
+            
+           
+            const formData = new FormData();
             formData.append('action', 'login');
             formData.append('email', email);
             formData.append('password', password);
@@ -83,7 +87,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 method: 'POST',
                 body: formData
             })
-
             .then(response => response.json())
             .then(data => {
                 if (data.success) {
@@ -103,7 +106,75 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    function isValidEmail(email) {
+    
+    const signupForm = document.getElementById('signupForm');
+    
+    if (signupForm) {
+        signupForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('signupName').value;
+            const email = document.getElementById('signupEmail').value;
+            const password = document.getElementById('signupPassword').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            
+           
+            if (!name || !email || !password || !confirmPassword) {
+                showAlert('Please fill in all fields', 'danger');
+                return;
+            }
+            
+            
+            if (!isValidEmail(email)) {
+                showAlert('Please enter a valid email address', 'danger');
+                return;
+            }
+            
+            
+            if (password.length < 6) {
+                showAlert('Password must be at least 6 characters long', 'danger');
+                return;
+            }
+            
+            
+            if (password !== confirmPassword) {
+                showAlert('Passwords do not match', 'danger');
+                return;
+            }
+            
+            
+            const formData = new FormData();
+            formData.append('action', 'signup');
+            formData.append('name', name);
+            formData.append('email', email);
+            formData.append('password', password);
+            
+            fetch('auth.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    showAlert(data.message, 'success');
+                    
+                    setTimeout(() => {
+                        switchForm('login');
+                    }, 2000);
+                } else {
+                    showAlert(data.message, 'danger');
+                }
+            })
+            .catch(error => {
+                showAlert('An error occurred. Please try again.', 'danger');
+                console.error('Error:', error);
+            });
+        });
+    }
+});
+
+
+function isValidEmail(email) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
 }
@@ -132,6 +203,4 @@ if (glassCard) {
         glassCard.style.transform = 'perspective(1000px) rotateY(0) rotateX(0) translateY(0)';
     });
 }
-
-
             
