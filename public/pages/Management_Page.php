@@ -175,6 +175,41 @@
         }
         .resource-table-container {
             animation: fadeIn 1.4s ease;
+        }.table-glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .table-glass thead {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .table-glass th {
+            color: #fff;
+            font-weight: 600;
+            padding: 18px;
+            border: none;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+
+        .table-glass td {
+            color:rgb(29, 31, 38); 
+            padding: 18px;
+            border: none;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            vertical-align: middle;
+        }
+
+        .table-glass tbody tr {
+            transition: all 0.3s ease;
+        }
+
+        .table-glass tbody tr:hover {
+            background: rgba(255, 255, 255, 0.08);
         }
 
 
