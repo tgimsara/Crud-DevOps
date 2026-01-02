@@ -1,3 +1,6 @@
+ <?php
+    require_once '../config.php'; ?>
+
  <!doctype html>
  <html lang="en">
   <head>
@@ -185,6 +188,103 @@
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
      <script src="js/login.js"></script>
+     <script>
+        // Switch between login and signup forms
+function switchForm(formType) {
+    const loginForm = document.getElementById('loginForm');
+    const signupForm = document.getElementById('signupForm');
+    
+    if (formType === 'signup') {
+        loginForm.style.display = 'none';
+        signupForm.style.display = 'block';
+    } else {
+        loginForm.style.display = 'block';
+        signupForm.style.display = 'none';
+    }
+}
+
+// Login Form Submit
+document.getElementById('loginForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const formData = new FormData(this);
+    
+    fetch('login_process.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            alert(data.message);
+            window.location.href = 'dashboard.php'; // redirect to dashboard
+        } else {
+            alert(data.message);
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('An error occurred. Please try again.');
+    });
+});
+
+// Signup Form Submit
+document.getElementById('signupForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const name = document.getElementById('signupName').value;
+    const email = document.getElementById('signupEmail').value;
+    const password = document.getElementById('signupPassword').value;
+    
+    // Basic validation
+    if (name.trim() === '' || email.trim() === '' || password.trim() === '') {
+        alert('Please fill all fields');
+        return;
+    }
+    
+    const formData = new FormData(this);
+    
+    fetch('signup_process.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        alert(data.message);
+        if (data.success) {
+            // Clear form
+            document.getElementById('signupForm').reset();
+            // Switch to login form
+            switchForm('login');
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('An error occurred. Please try again.');
+    });
+});
+
+// Toggle password visibility
+function togglePassword(fieldId) {
+    const field = document.getElementById(fieldId);
+    const icon = field.parentElement.querySelector('.password-toggle i');
+    
+    if (field.type === 'password') {
+        field.type = 'text';
+        icon.classList.remove('fa-eye');
+        icon.classList.add('fa-eye-slash');
+    } else {
+        field.type = 'password';
+        icon.classList.remove('fa-eye-slash');
+        icon.classList.add('fa-eye');
+    }
+}
+
+// Google login placeholder
+function googleLogin() {
+    alert('Google login feature coming soon!');
+}
+     </script>
    
   </body>
 </html>
