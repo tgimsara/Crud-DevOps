@@ -850,3 +850,271 @@
                         <span class="underline-animation"></span>
 
                     </h2>
+
+
+
+                    <p>
+                        Trees play a crucial role in reducing the effects of climate change. By absorbing carbon dioxide and releasing oxygen, they help regulate global temperatures and reduce greenhouse gases in the atmosphere. Large-scale tree planting initiatives can significantly contribute to cooling the environment and supporting climate resilience.
+                    </p>
+                </div>
+            </section>
+
+            
+            <section class="liquid-glass-card">
+                <div class="card-image-wrapper">
+                    <img src="https://i.pinimg.com/736x/1e/16/89/1e16897d6a20f03703b2682e94100082.jpg" alt="Supporting Biodiversity">
+                    <div class="image-frost-overlay"></div>
+
+
+                    <div class="card-number">03</div>
+                    <div class="card-badge">
+                        <span>🦋</span> Wildlife
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h2>
+                        <span class="icon">🌿</span>
+                        Supporting Biodiversity
+
+                        <span class="underline-animation"></span>
+                    </h2>
+                    <p>
+                        Trees create habitats for countless species of birds, insects, and animals. They form the foundation of healthy ecosystems, allowing biodiversity to thrive. When trees are planted thoughtfully, they help restore damaged ecosystems and protect wildlife that depends on natural forests for survival.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Card 4 -->
+            <section class="liquid-glass-card">
+                <div class="card-image-wrapper">
+
+                    <img src="https://i.pinimg.com/736x/e6/10/a2/e610a219dd6cb949eb1b9e4aec0409d8.jpg" alt="Strengthening Communities">
+                    <div class="image-frost-overlay"></div>
+
+                    <div class="card-number">04</div>
+                    <div class="card-badge">
+                        <span>🏘️</span> Community
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h2>
+                        <span class="icon">💚</span>
+                        Strengthening Communities
+                        <span class="underline-animation"></span>
+                    </h2>
+                    <p>
+                        Tree planting goes beyond environmental impact; it also improves quality of life. Green spaces promote physical and mental well-being, reduce stress, and create more livable communities. Shaded areas lower heat in urban spaces, making neighborhoods healthier and more comfortable for everyone.
+                    </p>
+                </div>
+            </section>
+
+            
+            <section class="liquid-glass-card">
+                <div class="card-image-wrapper">
+
+
+                    <img src="https://i.pinimg.com/736x/0b/d9/14/0bd9149ba7eebd418a505cec36e36893.jpg" alt="Sustainable Future">
+                    <div class="image-frost-overlay"></div>
+                    <div class="card-number">05</div>
+                    <div class="card-badge">
+                        <span>♻️</span> Sustainability
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h2>
+                        <span class="icon">🔮</span>
+
+                        Sustainable Future
+                        <span class="underline-animation"></span>
+                    </h2>
+                    <p>
+                        Planting trees today ensures a greener tomorrow. When initiatives are planned, tracked, and maintained over time, their impact becomes lasting and meaningful. By encouraging responsible tree planting efforts, we help build a future where development and nature grow together in harmony.
+                    </p>
+                </div>
+            </section>
+
+           
+            <section class="liquid-glass-card">
+                <div class="card-image-wrapper">
+                    <img src="https://i.pinimg.com/736x/4d/0f/bc/4d0fbc67a505a15661a7a7e9ee9faf70.jpg" alt="A Step Toward a Greener Tomorrow">
+                    <div class="image-frost-overlay"></div>
+                    <div class="card-number">06</div>
+                    <div class="card-badge">
+                        <span>🌍</span> Tomorrow
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h2>
+                        <span class="icon">🌅</span>
+
+
+                        A Greener Tomorrow
+                        <span class="underline-animation"></span>
+                    </h2>
+                    <p>
+                        Planting trees is not just about adding greenery to our surroundings; it is about taking responsibility for the future of our planet. Every tree planted contributes to cleaner air, healthier ecosystems, and stronger communities. When we commit to nurturing trees and protecting green spaces, we create a lasting impact that supports life today and for generations to come.
+                    </p>
+                </div>
+            </section>
+        </div>
+
+        
+        <div class="stats-section">
+            <div class="stat-card">
+                <span class="stat-icon">🌲</span>
+
+
+                <span class="stat-number" data-target="3">0</span>
+                <span class="stat-label">Trillion Trees Globally</span>
+            </div>
+            <div class="stat-card">
+
+                <span class="stat-icon">💨</span>
+                <span class="stat-number" data-target="48">0</span>
+
+
+
+                <span class="stat-label">Pounds CO₂/Year/Tree</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-icon">🌡️</span>
+                <span class="stat-number" data-target="10">0</span>
+                <span class="stat-label">°F Cooling Effect</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-icon">🦜</span>
+                <span class="stat-number" data-target="80">0</span>
+                <span class="stat-label">% Species Need Trees</span>
+            </div>
+        </div>
+
+        
+           </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        
+        window.addEventListener('scroll', () => {
+            const scrollProgress = document.getElementById('scrollProgress');
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollPercent = (scrollTop / docHeight) * 100;
+            scrollProgress.style.width = scrollPercent + '%';
+        });
+
+       
+        function revealOnScroll() {
+            const elements = document.querySelectorAll('.liquid-glass-card, .stat-card');
+            
+            elements.forEach(el => {
+                const rect = el.getBoundingClientRect();
+                const windowHeight = window.innerHeight;
+                
+                if (rect.top < windowHeight - 80) {
+                    el.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', revealOnScroll);
+        window.addEventListener('load', revealOnScroll);
+
+        
+        const mouseGlow = document.getElementById('mouseGlow');
+        
+        document.addEventListener('mousemove', (e) => {
+            mouseGlow.style.left = e.clientX + 'px';
+            mouseGlow.style.top = e.clientY + 'px';
+        });
+
+        
+        function createFloatingLeaves() {
+            const container = document.getElementById('floatingLeaves');
+            const leaves = ['🍃', '🌿', '🍂', '🌱', '☘️'];
+            
+            for (let i = 0; i < 15; i++) {
+                const leaf = document.createElement('div');
+                leaf.className = 'leaf';
+                leaf.textContent = leaves[Math.floor(Math.random() * leaves.length)];
+                leaf.style.left = Math.random() * 100 + '%';
+                leaf.style.animationDelay = Math.random() * 15 + 's';
+                leaf.style.animationDuration = (15 + Math.random() * 10) + 's';
+                container.appendChild(leaf);
+            }
+        }
+
+        createFloatingLeaves();
+
+        
+        function animateCounters() {
+            const counters = document.querySelectorAll('.stat-number');
+            
+            counters.forEach(counter => {
+                const target = parseFloat(counter.getAttribute('data-target'));
+                const duration = 2500;
+                const increment = target / (duration / 16);
+                let current = 0;
+                
+                const updateCounter = () => {
+                    current += increment;
+                    if (current < target) {
+                        counter.textContent = Math.floor(current);
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        counter.textContent = target;
+                    }
+                };
+                
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            updateCounter();
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.5 });
+                
+                observer.observe(counter.parentElement);
+            });
+        }
+
+        animateCounters();
+
+       
+        const cards = document.querySelectorAll('.liquid-glass-card');
+        
+        cards.forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                const rotateX = (y - centerY) / 15;
+                const rotateY = (centerX - x) / 15;
+                
+                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-12px) scale(1.02)`;
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0) scale(1)';
+            });
+        });
+
+        
+        document.addEventListener('mousemove', (e) => {
+            const orbs = document.querySelectorAll('.orb');
+            const mouseX = e.clientX / window.innerWidth;
+            const mouseY = e.clientY / window.innerHeight;
+            
+            orbs.forEach((orb, index) => {
+                const speed = (index + 1) * 25;
+                const x = (mouseX - 0.5) * speed;
+                const y = (mouseY - 0.5) * speed;
+                orb.style.transform = `translate(${x}px, ${y}px)`;
+            });
+        });
+    </script>
+</body>
+</html>
