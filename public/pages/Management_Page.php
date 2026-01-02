@@ -250,7 +250,7 @@
         }
 
         .table-glass td {
-            color: rgba(255, 255, 255, 0.9);
+            color: rgba(47, 32, 32, 0.9);
             padding: 18px;
             border: none;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
