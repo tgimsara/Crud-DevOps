@@ -2,10 +2,19 @@
 session_start();
 require_once '../config.php';
 
+header('Content-Type: application/json');
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $name = $_POST['name'];
     $email = $_POST['email'];
     $password = $_POST['password'];
+    $confirm_password = $_POST['confirm_password'];
+    
+    // Check if passwords match
+    if ($password !== $confirm_password) {
+        echo json_encode(['success' => false, 'message' => 'Passwords do not match']);
+        exit;
+    }
     
     // Check if email already exists
     $check = "SELECT * FROM users WHERE email = '$email'";
@@ -20,8 +29,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if (mysqli_query($conn, $query)) {
             echo json_encode(['success' => true, 'message' => 'Account created successfully']);
         } else {
-            echo json_encode(['success' => false, 'message' => 'Registration failed']);
+            echo json_encode(['success' => false, 'message' => 'Registration failed: ' . mysqli_error($conn)]);
         }
     }
+} else {
+    echo json_encode(['success' => false, 'message' => 'Invalid request method']);
 }
 ?>
