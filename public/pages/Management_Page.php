@@ -125,7 +125,54 @@
             box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
             background: linear-gradient(135deg, #059669 0%, #047857 100%);
         }
+        .summary-cards {
+            margin-bottom: 40px;
+            animation: fadeIn 1.2s ease;
+        }
 
+        .summary-card {
+            position: relative;
+            height: 100%;
+            animation: scaleIn 0.5s ease;
+        }
+
+        .summary-card .icon-wrapper {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 2rem;
+            background: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .summary-card:hover .icon-wrapper {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .summary-card .value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #fff;
+            text-shadow: 1px 1px 10px rgba(0,0,0,0.2);
+            margin-bottom: 5px;
+        }
+
+        .summary-card .label {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        .summary-card .sub-info {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+            margin-top: 10px;
+        }
 
 
         </style>
