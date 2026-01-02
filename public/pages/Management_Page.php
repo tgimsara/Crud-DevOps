@@ -234,7 +234,15 @@
             background: linear-gradient(90deg, #ef4444, #dc2626);
         }
 
-        
+        .charts-section {
+            margin-top: 40px;
+            animation: fadeIn 1.6s ease;
+        }
+
+        .chart-container {
+            height: 350px;
+            position: relative;
+        }
 
 
         </style>
