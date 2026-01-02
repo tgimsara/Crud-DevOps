@@ -7,7 +7,7 @@
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <title>Achieve Gender Equality</title>
+    <title>Reducing Carbon Dioxide Emissions</title>
 
     <style>
         body {
