@@ -45,6 +45,15 @@
             0%, 100% { opacity: 1; }
             50% { opacity: 0.7; }
         }
+        .main-container {
+            position: relative;
+            z-index: 1;
+            padding: 30px 20px;
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+
         </style>
 
     </head>
