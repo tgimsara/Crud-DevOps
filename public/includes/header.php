@@ -206,7 +206,6 @@ body{
   text-decoration:none;
 }
 
-/* ================== RESPONSIVE ================== */
 @media(max-width:768px){
   .nav-desktop{display:none;}
   .nav-burger{display:block;}
@@ -218,12 +217,10 @@ body{
 
 <header class="glass-navbar" id="mainGlassNavbar">
 
-  <!-- Burger -->
   <div class="nav-burger" id="navBurgerBtn">
     <span></span><span></span>
   </div>
-
-  <!-- Desktop Nav -->
+  
   <ul class="nav-desktop" id="desktopNavMenu">
 
     <li class="nav-item" id="navProject">
@@ -232,7 +229,7 @@ body{
         <a href="#">Overview</a>
         <a href="#">Timeline</a>
         <a href="#">Team</a>
-        <a href="#">Goals</a>
+        <a href="pages/achievement.php">Achievements</a>
       </div>
     </li>
 
@@ -267,7 +264,7 @@ body{
 
   </ul>
 
-  <!-- Right Actions -->
+
   <div class="nav-actions">
     <a href="../logout.php" class="logout-btn">Logout</a>
     <div class="profile-img">
@@ -278,7 +275,7 @@ body{
   </div>
 </header>
 
-<!-- Mobile Menu -->
+
 <nav class="mobile-panel" id="mobileMenuPanel">
   <ul>
 
@@ -319,7 +316,7 @@ body{
 </nav>
 
 <script>
-/* ================== BURGER TOGGLE ================== */
+
 const burgerBtn = document.getElementById("navBurgerBtn");
 const mobilePanel = document.getElementById("mobileMenuPanel");
 
@@ -328,7 +325,7 @@ burgerBtn.addEventListener("click",()=>{
   mobilePanel.classList.toggle("open");
 });
 
-/* ================== MOBILE DROPDOWNS ================== */
+
 document.querySelectorAll(".mobile-label").forEach(label=>{
   label.addEventListener("click",()=>{
     const parent = label.parentElement;
