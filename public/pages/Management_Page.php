@@ -9,8 +9,16 @@
 
     </head>
     <body>
-        <div class="container">
-            <h1>Resource Management</h1>
-        </div>
+    <div class="floating-elements">
+        <i class="fas fa-recycle float-item" style="font-size: 100px; color: #10b981;"></i>
+        <i class="fas fa-leaf float-item" style="font-size: 80px; color: #059669;"></i>
+        <i class="fas fa-globe float-item" style="font-size: 90px; color: #3b82f6;"></i>
+        <i class="fas fa-solar-panel float-item" style="font-size: 85px; color: #8b5cf6;"></i>
+    </div>
+
+
+
+
+    
     </body>
 </html>
