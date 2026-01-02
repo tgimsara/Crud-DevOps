@@ -104,12 +104,28 @@
                      unpredictable weather, and increasing pollution are all connected to one major factor: carbon dioxide (CO₂)
                       emissions. Reducing these emissions is one of the most important steps we can take toward protecting our 
                       planet and our future.
-                      CO₂ is released into the atmosphere through everyday activities such as burning fossil fuels, excessive energy consumption, transportation, and industrial processes. While these activities support modern life, their environmental impact is significant. The good news is that small, collective actions can create powerful change. 
+                      CO₂ is released into the atmosphere through everyday activities such as burning fossil fuels, excessive
+                       energy consumption, transportation, and industrial processes. While these activities support modern life, 
+                       their environmental impact is significant. The good news is that small, collective actions can create powerful change. 
                 </p>
             </section>
 
+            <section>
+                <img src="" alt=" ">
+                <h2>Why Reducing CO₂ Emissions Matters</h2>
+                <p>
+                High levels of carbon dioxide trap heat in the atmosphere, leading to global warming and climate change.
+                 This affects ecosystems, food security, water availability, and human health. Communities with fewer resources 
+                 often suffer the most, making this not just an environmental issue, but a social one as well.
+                </p>
+            </section>            
 
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 
 
 <script>
@@ -124,8 +140,11 @@
     }
 
     window.addEventListener('scroll', revealOnScroll);
+
+
     window.addEventListener('load', revealOnScroll);
 </script>
+
 
 
 
