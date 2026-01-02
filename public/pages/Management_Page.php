@@ -83,7 +83,32 @@
             box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
             border: 1px solid rgba(255, 255, 255, 0.3);
         }
+        .filter-bar {
+            margin-bottom: 30px;
+            animation: fadeIn 1s ease;
+        }
 
+        .filter-select {
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 12px;
+            color: #fff;
+            padding: 12px 20px;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .filter-select:focus {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.5);
+            outline: none;
+            color: #fff;
+        }
+
+        .filter-select option {
+            background: #2a5298;
+            color: #fff;
+        }
 
 
         </style>
