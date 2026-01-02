@@ -173,6 +173,258 @@
             font-size: 0.9rem;
             margin-top: 10px;
         }
+        .resource-table-container {
+            animation: fadeIn 1.4s ease;
+        }.table-glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .table-glass thead {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .table-glass th {
+            color: #fff;
+            font-weight: 600;
+            padding: 18px;
+            border: none;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+
+        .table-glass td {
+            color:rgb(29, 31, 38); 
+            padding: 18px;
+            border: none;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            vertical-align: middle;
+        }
+
+        .table-glass tbody tr {
+            transition: all 0.3s ease;
+        }
+
+        .table-glass tbody tr:hover {
+            background: rgba(255, 255, 255, 0.08);
+        }
+        .progress-bar-custom {
+            height: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 8px;
+        }
+
+        .progress-fill {
+            height: 100%;
+            border-radius: 10px;
+            transition: width 1s ease;
+            background: linear-gradient(90deg, #10b981, #059669);
+        }
+
+        .progress-fill.warning {
+            background: linear-gradient(90deg, #fbbf24, #f59e0b);
+        }
+
+        .progress-fill.danger {
+            background: linear-gradient(90deg, #ef4444, #dc2626);
+        }
+
+        .charts-section {
+            margin-top: 40px;
+            animation: fadeIn 1.6s ease;
+        }
+
+        .chart-container {
+            height: 350px;
+            position: relative;
+        }
+        .modal-content {
+            background: rgba(30, 60, 114, 0.95);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            color: #fff;
+        }
+
+        .modal-header {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .modal-footer {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .form-control, .form-select {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #fff;
+            border-radius: 10px;
+            padding: 12px;
+        }
+
+        .form-control:focus, .form-select:focus {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.4);
+            color: #fff;
+            box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.1);
+        }
+
+        .form-control::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .form-label {
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        
+        .btn-action {
+            width: 35px;
+            height: 35px;
+            border-radius: 8px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            transition: all 0.3s ease;
+            margin: 0 3px;
+        }
+
+        .btn-edit {
+            background: rgba(59, 130, 246, 0.2);
+            color: #60a5fa;
+            border: 1px solid rgba(59, 130, 246, 0.3);
+        }
+
+        .btn-edit:hover {
+            background: rgba(59, 130, 246, 0.3);
+            transform: scale(1.1);
+        }
+
+        .btn-delete {
+            background: rgba(239, 68, 68, 0.2);
+            color: #fca5a5;
+            border: 1px solid rgba(239, 68, 68, 0.3);
+        }
+
+        .btn-delete:hover {
+            background: rgba(239, 68, 68, 0.3);
+            transform: scale(1.1);
+        }
+
+        .tips-container {
+            margin-top: 40px;
+            animation: fadeIn 1.8s ease;
+        }
+
+        .tip-card {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.15) 0%, rgba(5, 150, 105, 0.15) 100%);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .tip-card:hover {
+            transform: translateX(10px);
+            border-color: rgba(16, 185, 129, 0.5);
+        }
+
+        .tip-card i {
+            color: #6ee7b7;
+            font-size: 1.3rem;
+            margin-right: 15px;
+        }
+
+        .tip-card .tip-text {
+            color: #fff;
+            font-size: 1rem;
+        }
+
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInDown {
+            from { 
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes scaleIn {
+            from { 
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to { 
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+
+        
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 2rem;
+            }
+            .page-header .subtitle {
+                font-size: 1rem;
+            }
+            .table-responsive {
+                font-size: 0.85rem;
+            }
+            .summary-card .value {
+                font-size: 1.5rem;
+            }
+        }
+        .floating-elements {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .float-item {
+            position: absolute;
+            opacity: 0.1;
+            animation: float 20s infinite ease-in-out;
+        }
+
+        .float-item:nth-child(1) { top: 10%; left: 10%; animation-delay: 0s; }
+        .float-item:nth-child(2) { top: 60%; left: 80%; animation-delay: 3s; }
+        .float-item:nth-child(3) { top: 30%; left: 70%; animation-delay: 6s; }
+        .float-item:nth-child(4) { top: 80%; left: 20%; animation-delay: 9s; }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            25% { transform: translateY(-30px) rotate(5deg); }
+            50% { transform: translateY(-60px) rotate(-5deg); }
+            75% { transform: translateY(-30px) rotate(3deg); }
+        }
 
 
         </style>

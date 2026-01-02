@@ -1,5 +1,5 @@
 <?php
-    require_once 'config.php';
+    require_once '../config.php';
 ?>
 <!doctype html>
  <html lang="en">
@@ -161,7 +161,62 @@
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
      <script src="js/login.js"></script>
-     
+     <script>
+        // Login Form Submit
+document.getElementById('loginForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const formData = new FormData(this);
+    
+    fetch('login_process.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            alert(data.message);
+            window.location.href = 'dashboard.php'; // redirect to dashboard
+        } else {
+            alert(data.message);
+        }
+    });
+});
+
+// Signup Form Submit
+document.getElementById('signupForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const formData = new FormData(this);
+    
+    fetch('signup_process.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        alert(data.message);
+        if (data.success) {
+            switchForm('login');
+        }
+    });
+});
+
+function togglePassword(fieldId) {
+    const field = document.getElementById(fieldId);
+    const icon = field.parentElement.querySelector('.password-toggle i');
+    
+    if (field.type === 'password') {
+        field.type = 'text';
+        icon.classList.remove('fa-eye');
+        icon.classList.add('fa-eye-slash');
+    } else {
+        field.type = 'password';
+        icon.classList.remove('fa-eye-slash');
+        icon.classList.add('fa-eye');
+    }
+}
+     </script>
    
   </body>
 </html>
