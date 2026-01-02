@@ -403,7 +403,7 @@
         </div>
     </div>
 </div>
-                <h3 class="partner-name">Nordic Enterprises</h3>
+                
             </div>
         </div>
     </div>
