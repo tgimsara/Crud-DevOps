@@ -6,13 +6,8 @@
     <title>♻ Resource Management - SDG Dashboard</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-
-
-        <style>
-
-
-* {
+    <style>
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -45,13 +40,39 @@
             0%, 100% { opacity: 1; }
             50% { opacity: 0.7; }
         }
+
         .main-container {
             position: relative;
             z-index: 1;
             padding: 30px 20px;
             max-width: 1600px;
             margin: 0 auto;
-        }.glass-card {
+        }
+
+       
+        .page-header {
+            text-align: center;
+            margin-bottom: 40px;
+            animation: fadeInDown 0.8s ease;
+        }
+
+        .page-header h1 {
+            color: #fff;
+            font-size: 3rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 20px rgba(0,0,0,0.3);
+            margin-bottom: 10px;
+        }
+
+        .page-header .subtitle {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.3rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+
+        
+        .glass-card {
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(20px);
             border-radius: 20px;
@@ -83,6 +104,8 @@
             box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
             border: 1px solid rgba(255, 255, 255, 0.3);
         }
+
+        
         .filter-bar {
             margin-bottom: 30px;
             animation: fadeIn 1s ease;
@@ -109,6 +132,7 @@
             background: #2a5298;
             color: #fff;
         }
+
         .btn-add {
             background: linear-gradient(135deg, #10b981 0%, #059669 100%);
             border: none;
@@ -125,6 +149,8 @@
             box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
             background: linear-gradient(135deg, #059669 0%, #047857 100%);
         }
+
+        
         .summary-cards {
             margin-bottom: 40px;
             animation: fadeIn 1.2s ease;
@@ -173,22 +199,330 @@
             font-size: 0.9rem;
             margin-top: 10px;
         }
+
+       
+        .alert-banner {
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.2) 0%, rgba(220, 38, 38, 0.2) 100%);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(239, 68, 68, 0.4);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 30px;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .alert-banner i {
+            font-size: 1.5rem;
+            margin-right: 15px;
+            color: #fca5a5;
+        }
+
+        .alert-banner .alert-text {
+            color: #fff;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        
         .resource-table-container {
             animation: fadeIn 1.4s ease;
         }
 
+        .table-glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            overflow: hidden;
+        }
 
-        </style>
+        .table-glass thead {
+            background: rgba(255, 255, 255, 0.1);
+        }
 
-    </head>
-    <body>
+        .table-glass th {
+            color: #fff;
+            font-weight: 600;
+            padding: 18px;
+            border: none;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+
+        .table-glass td {
+            color: rgba(47, 32, 32, 0.9);
+            padding: 18px;
+            border: none;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            vertical-align: middle;
+        }
+
+        .table-glass tbody tr {
+            transition: all 0.3s ease;
+        }
+
+        .table-glass tbody tr:hover {
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .status-badge {
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .status-safe {
+            background: rgba(16, 185, 129, 0.2);
+            color: #6ee7b7;
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+
+        .status-warning {
+            background: rgba(251, 191, 36, 0.2);
+            color: #fcd34d;
+            border: 1px solid rgba(251, 191, 36, 0.3);
+        }
+
+        .status-danger {
+            background: rgba(239, 68, 68, 0.2);
+            color: #fca5a5;
+            border: 1px solid rgba(239, 68, 68, 0.3);
+        }
+
+        .progress-bar-custom {
+            height: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 8px;
+        }
+
+        .progress-fill {
+            height: 100%;
+            border-radius: 10px;
+            transition: width 1s ease;
+            background: linear-gradient(90deg, #10b981, #059669);
+        }
+
+        .progress-fill.warning {
+            background: linear-gradient(90deg, #fbbf24, #f59e0b);
+        }
+
+        .progress-fill.danger {
+            background: linear-gradient(90deg, #ef4444, #dc2626);
+        }
+
+        
+        .charts-section {
+            margin-top: 40px;
+            animation: fadeIn 1.6s ease;
+        }
+
+        .chart-container {
+            height: 350px;
+            position: relative;
+        }
+
+       
+        .modal-content {
+            background: rgba(30, 60, 114, 0.95);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            color: #fff;
+        }
+
+        .modal-header {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .modal-footer {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .form-control, .form-select {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #fff;
+            border-radius: 10px;
+            padding: 12px;
+        }
+
+        .form-control:focus, .form-select:focus {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.4);
+            color: #fff;
+            box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.1);
+        }
+
+        .form-control::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .form-label {
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        
+        .btn-action {
+            width: 35px;
+            height: 35px;
+            border-radius: 8px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            transition: all 0.3s ease;
+            margin: 0 3px;
+        }
+
+        .btn-edit {
+            background: rgba(59, 130, 246, 0.2);
+            color: #60a5fa;
+            border: 1px solid rgba(59, 130, 246, 0.3);
+        }
+
+        .btn-edit:hover {
+            background: rgba(59, 130, 246, 0.3);
+            transform: scale(1.1);
+        }
+
+        .btn-delete {
+            background: rgba(239, 68, 68, 0.2);
+            color: #fca5a5;
+            border: 1px solid rgba(239, 68, 68, 0.3);
+        }
+
+        .btn-delete:hover {
+            background: rgba(239, 68, 68, 0.3);
+            transform: scale(1.1);
+        }
+
+       
+        .tips-container {
+            margin-top: 40px;
+            animation: fadeIn 1.8s ease;
+        }
+
+        .tip-card {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.15) 0%, rgba(5, 150, 105, 0.15) 100%);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .tip-card:hover {
+            transform: translateX(10px);
+            border-color: rgba(16, 185, 129, 0.5);
+        }
+
+        .tip-card i {
+            color: #6ee7b7;
+            font-size: 1.3rem;
+            margin-right: 15px;
+        }
+
+        .tip-card .tip-text {
+            color: #fff;
+            font-size: 1rem;
+        }
+
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInDown {
+            from { 
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes scaleIn {
+            from { 
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to { 
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+
+        
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 2rem;
+            }
+            .page-header .subtitle {
+                font-size: 1rem;
+            }
+            .table-responsive {
+                font-size: 0.85rem;
+            }
+            .summary-card .value {
+                font-size: 1.5rem;
+            }
+        }
+
+        
+        .floating-elements {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .float-item {
+            position: absolute;
+            opacity: 0.1;
+            animation: float 20s infinite ease-in-out;
+        }
+
+        .float-item:nth-child(1) { top: 10%; left: 10%; animation-delay: 0s; }
+        .float-item:nth-child(2) { top: 60%; left: 80%; animation-delay: 3s; }
+        .float-item:nth-child(3) { top: 30%; left: 70%; animation-delay: 6s; }
+        .float-item:nth-child(4) { top: 80%; left: 20%; animation-delay: 9s; }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            25% { transform: translateY(-30px) rotate(5deg); }
+            50% { transform: translateY(-60px) rotate(-5deg); }
+            75% { transform: translateY(-30px) rotate(3deg); }
+        }
+    </style>
+</head>
+<body>
+   
     <div class="floating-elements">
         <i class="fas fa-recycle float-item" style="font-size: 100px; color: #10b981;"></i>
         <i class="fas fa-leaf float-item" style="font-size: 80px; color: #059669;"></i>
         <i class="fas fa-globe float-item" style="font-size: 90px; color: #3b82f6;"></i>
         <i class="fas fa-solar-panel float-item" style="font-size: 85px; color: #8b5cf6;"></i>
     </div>
-
 
     <div class="main-container">
         
@@ -235,7 +569,7 @@
             </div>
         </div>
 
-        <
+        
         <div class="alert-banner d-flex align-items-center">
             <i class="fas fa-exclamation-triangle"></i>
             <div class="alert-text">
@@ -301,13 +635,13 @@
             </div>
         </div>
 
-        
-            <div class="resource-table-container">
-              <div class="glass-card">
+       
+        <div class="resource-table-container">
+            <div class="glass-card">
                 <h4 class="text-white mb-4">Resource Allocation & Usage</h4>
-                   <div class="table-responsive">
-                      <table class="table table-glass">
-                         <thead>
+                <div class="table-responsive">
+                    <table class="table table-glass">
+                        <thead>
                             <tr>
                                 <th>Resource</th>
                                 <th>Type</th>
@@ -332,8 +666,8 @@
                                     <button class="btn-action btn-edit"><i class="fas fa-edit"></i></button>
                                     <button class="btn-action btn-delete"><i class="fas fa-trash"></i></button>
                                 </td>
-                                </tr>
-                                 <tr>
+                            </tr>
+                            <tr>
                                 <td><i class="fas fa-gas-pump me-2"></i>Fuel</td>
                                 <td><span class="badge" style="background: rgba(251, 191, 36, 0.2); color: #fcd34d;">⚡ Energy</span></td>
                                 <td>Tree Drive</td>
@@ -344,9 +678,9 @@
                                 <td>
                                     <button class="btn-action btn-edit"><i class="fas fa-edit"></i></button>
                                     <button class="btn-action btn-delete"><i class="fas fa-trash"></i></button>
-                                 </td>
-                                 </tr>
-                                   <tr>
+                                </td>
+                            </tr>
+                            <tr>
                                 <td><i class="fas fa-money-bill-wave me-2"></i>Funds</td>
                                 <td><span class="badge" style="background: rgba(16, 185, 129, 0.2); color: #6ee7b7;">💰 Financial</span></td>
                                 <td>Beach Cleanup</td>
@@ -358,8 +692,8 @@
                                     <button class="btn-action btn-edit"><i class="fas fa-edit"></i></button>
                                     <button class="btn-action btn-delete"><i class="fas fa-trash"></i></button>
                                 </td>
-                                 </tr>
-                                 <tr>
+                            </tr>
+                            <tr>
                                 <td><i class="fas fa-user-clock me-2"></i>Volunteer Hours</td>
                                 <td><span class="badge" style="background: rgba(139, 92, 246, 0.2); color: #c4b5fd;">⏱ Human Effort</span></td>
                                 <td>Solar Campaign</td>
@@ -371,8 +705,8 @@
                                     <button class="btn-action btn-edit"><i class="fas fa-edit"></i></button>
                                     <button class="btn-action btn-delete"><i class="fas fa-trash"></i></button>
                                 </td>
-                               </tr>
-                                <tr>
+                            </tr>
+                            <tr>
                                 <td><i class="fas fa-tint me-2"></i>Water</td>
                                 <td><span class="badge" style="background: rgba(6, 182, 212, 0.2); color: #67e8f9;">🚿 Water</span></td>
                                 <td>Community Garden</td>
@@ -384,8 +718,8 @@
                                     <button class="btn-action btn-edit"><i class="fas fa-edit"></i></button>
                                     <button class="btn-action btn-delete"><i class="fas fa-trash"></i></button>
                                 </td>
-                              </tr>
-                               <tr>
+                            </tr>
+                            <tr>
                                 <td><i class="fas fa-bolt me-2"></i>Electricity</td>
                                 <td><span class="badge" style="background: rgba(251, 191, 36, 0.2); color: #fcd34d;">⚡ Energy</span></td>
                                 <td>Office Operations</td>
@@ -393,18 +727,18 @@
                                 <td>300 kWh</td>
                                 <td>87%</td>
                                 <td><span class="status-badge status-warning"><i class="fas fa-exclamation-triangle"></i>Warning</span></td>
-                                  <td>
+                                <td>
                                     <button class="btn-action btn-edit"><i class="fas fa-edit"></i></button>
                                     <button class="btn-action btn-delete"><i class="fas fa-trash"></i></button>
-                                  </td>
-                              </tr>
-                           </tbody>
-                      </table>
-                   </div>
-               </div>
-           </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
 
-        
+       
         <div class="charts-section">
             <div class="row g-4">
                 <div class="col-lg-6">
@@ -426,29 +760,29 @@
             </div>
         </div>
 
-        
+       
         <div class="tips-container">
             <div class="glass-card">
-                <h4 class="text-white mb-4">Smart Sustainability Suggestions</h4>
+                <h4 class="text-white mb-4"></i>Smart Sustainability Suggestions</h4>
                 <div class="tip-card d-flex align-items-center">
                     <i class="fas fa-file-pdf"></i>
                     <div class="tip-text">
                         <strong>Reduce Paper Usage:</strong> Consider digital documentation to reduce paper usage. Current paper consumption is at 80% capacity.
                     </div>
-                   </div>
-                   <div class="tip-card d-flex align-items-center">
+                </div>
+                <div class="tip-card d-flex align-items-center">
                     <i class="fas fa-car"></i>
                     <div class="tip-text">
                         <strong>Optimize Transportation:</strong> Fuel usage exceeded limit by 20%. Consider carpooling or using electric vehicles for next event.
                     </div>
-                  </div>
-                   <div class="tip-card d-flex align-items-center">
+                </div>
+                <div class="tip-card d-flex align-items-center">
                     <i class="fas fa-recycle"></i>
                     <div class="tip-text">
                         <strong>Material Reuse:</strong> Implement a material reuse program to reduce costs by up to 30% and minimize waste.
                     </div>
-                    </div>
-                     <div class="tip-card d-flex align-items-center">
+                </div>
+                <div class="tip-card d-flex align-items-center">
                     <i class="fas fa-solar-panel"></i>
                     <div class="tip-text">
                         <strong>Renewable Energy:</strong> Electricity usage at 87%. Consider solar panels to reduce dependency on grid power.
@@ -457,7 +791,7 @@
             </div>
         </div>
 
-        
+       
         <div class="glass-card mt-4">
             <h4 class="text-white mb-3">SDG Alignment</h4>
             <div class="row g-3">
@@ -468,8 +802,7 @@
                             <strong>SDG 12:</strong> Responsible Consumption<br>
                             <small>Resource limits & tracking</small>
                         </div>
-                    </div> 
-
+                    </div>
                 </div>
                 <div class="col-md-4">
                     <div class="tip-card text-center">
@@ -479,7 +812,6 @@
                             <small>Energy tracking & reduction</small>
                         </div>
                     </div>
-
                 </div>
                 <div class="col-md-4">
                     <div class="tip-card text-center">
@@ -487,14 +819,14 @@
                         <div class="tip-text">
                             <strong>SDG 17:</strong> Partnerships<br>
                             <small>Shared resources & collaboration</small>
-                          </div>
-                      </div>
-                   </div>
-               </div>
-           </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+    </div>
 
-    
+    <!-- Add Resource Modal -->
     <div class="modal fade" id="addResourceModal" tabindex="-1" aria-labelledby="addResourceModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
@@ -546,11 +878,11 @@
                             <div class="col-12">
                                 <label for="resourceNotes" class="form-label">Notes (Optional)</label>
                                 <textarea class="form-control" id="resourceNotes" rows="3" placeholder="Additional information about this resource..."></textarea>
-                              </div>
                             </div>
-                        </form>
-                     </div>
-                     <div class="modal-footer">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
                     <button type="button" class="btn btn-add" onclick="addResource()">
                         <i class="fas fa-save me-2"></i>Save Resource
@@ -560,67 +892,135 @@
         </div>
     </div>
 
-
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-            <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
     <script>
+        // Initialize Charts
+        document.addEventListener('DOMContentLoaded', function() {
+            // Pie Chart - Resource Distribution
+            const pieCtx = document.getElementById('pieChart').getContext('2d');
+            const pieChart = new Chart(pieCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Financial', 'Materials', 'Energy', 'Human Effort', 'Water'],
+                    datasets: [{
+                        data: [120000, 450, 320, 240, 800],
+                        backgroundColor: [
+                            'rgba(16, 185, 129, 0.8)',
+                            'rgba(59, 130, 246, 0.8)',
+                            'rgba(251, 191, 36, 0.8)',
+                            'rgba(139, 92, 246, 0.8)',
+                            'rgba(6, 182, 212, 0.8)'
+                        ],
+                        borderColor: [
+                            'rgba(16, 185, 129, 1)',
+                            'rgba(59, 130, 246, 1)',
+                            'rgba(251, 191, 36, 1)',
+                            'rgba(139, 92, 246, 1)',
+                            'rgba(6, 182, 212, 1)'
+                        ],
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                color: '#fff',
+                                padding: 15,
+                                font: {
+                                    size: 12
+                                }
+                            }
+                        },
+                        tooltip: {
+                            backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                            titleColor: '#fff',
+                            bodyColor: '#fff',
+                            borderColor: 'rgba(255, 255, 255, 0.2)',
+                            borderWidth: 1
+                        }
+                    }
+                }
+            });
 
-document.addEventListener('DOMContentLoaded', function() {
+            
+            const lineCtx = document.getElementById('lineChart').getContext('2d');
+            const lineChart = new Chart(lineCtx, {
+                type: 'line',
+                data: {
+                    labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4'],
+                    datasets: [{
+                        label: 'Budget Usage',
+                        data: [30000, 60000, 90000, 120000],
+                        borderColor: 'rgba(16, 185, 129, 1)',
+                        backgroundColor: 'rgba(16, 185, 129, 0.1)',
+                        tension: 0.4,
+                        fill: true
+                    }, {
+                        label: 'Energy Consumption',
+                        data: [80, 160, 240, 320],
+                        borderColor: 'rgba(251, 191, 36, 1)',
+                        backgroundColor: 'rgba(251, 191, 36, 0.1)',
+                        tension: 0.4,
+                        fill: true
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: {
+                                color: 'rgba(255, 255, 255, 0.1)'
+                            },
+                            ticks: {
+                                color: '#fff'
+                            }
+                        },
+                        x: {
+                            grid: {
+                                color: 'rgba(255, 255, 255, 0.1)'
+                            },
+                            ticks: {
+                                color: '#fff'
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            labels: {
+                                color: '#fff',
+                                padding: 15
+                            }
+                        },
+                        tooltip: {
+                            backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                            titleColor: '#fff',
+                            bodyColor: '#fff',
+                            borderColor: 'rgba(255, 255, 255, 0.2)',
+                            borderWidth: 1
+                        }
+                    }
+                }
+            });
+
+            
+            animateProgressBars();
+
            
-                  const pieCtx = document.getElementById('pieChart').getContext('2d');
-                  const pieChart = new Chart(pieCtx, {
-                   type: 'doughnut',
-                   data: {
-                   labels: ['Financial', 'Materials', 'Energy', 'Human Effort', 'Water'],
-                   datasets: [{
-                       data: [120000, 450, 320, 240, 800],
-                       backgroundColor: [
-                           'rgba(16, 185, 129, 0.8)',
-                           'rgba(59, 130, 246, 0.8)',
-                           'rgba(251, 191, 36, 0.8)',
-                           'rgba(139, 92, 246, 0.8)',
-                           'rgba(6, 182, 212, 0.8)'
-                       ],
-                       borderColor: [
-                           'rgba(16, 185, 129, 1)',
-                           'rgba(59, 130, 246, 1)',
-                           'rgba(251, 191, 36, 1)',
-                           'rgba(139, 92, 246, 1)',
-                           'rgba(6, 182, 212, 1)'
-                       ],
-                       borderWidth: 2
-                   }]
-               },
-                      options: {
-                      responsive: true,
-                      maintainAspectRatio: false,
-                      plugins: {
-                       legend: {
-                           position: 'bottom',
-                           labels: {
-                               color: '#fff',
-                               padding: 15,
-                               font: {
-                                   size: 12
-                               }
-                           }
-                       },
-                       tooltip: {
-                           backgroundColor: 'rgba(0, 0, 0, 0.8)',
-                           titleColor: '#fff',
-                           bodyColor: '#fff',
-                           borderColor: 'rgba(255, 255, 255, 0.2)',
-                           borderWidth: 1
-                       }
-                   }
-               }
-           });
+            observeElements();
+        });
 
-
-                 function addResource() {
-                 const form = document.getElementById('addResourceForm');
-                 if (form.checkValidity()) {
-                
+        
+        function addResource() {
+            const form = document.getElementById('addResourceForm');
+            if (form.checkValidity()) {
+               
                 const resourceName = document.getElementById('resourceName').value;
                 const resourceType = document.getElementById('resourceType').value;
                 const initiative = document.getElementById('initiative').value;
@@ -630,35 +1030,35 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 const usagePercent = Math.floor(Math.random() * 100);
                 
-               
-                     let statusClass, statusIcon, statusText;
-                    if (usagePercent < 80) {
+                
+                let statusClass, statusIcon, statusText;
+                if (usagePercent < 80) {
                     statusClass = 'status-safe';
                     statusIcon = 'fas fa-check-circle';
                     statusText = 'Safe';
-                    } else if (usagePercent < 100) {
+                } else if (usagePercent < 100) {
                     statusClass = 'status-warning';
                     statusIcon = 'fas fa-exclamation-triangle';
                     statusText = 'Warning';
-                     } else {
+                } else {
                     statusClass = 'status-danger';
                     statusIcon = 'fas fa-exclamation-circle';
                     statusText = 'Overuse';
-                     }
+                }
 
-               
-                     const typeIcons = {
+                
+                const typeIcons = {
                     'Financial': '💰',
                     'Material': '📦',
                     'Energy': '⚡',
                     'Human': '⏱',
                     'Water': '🚿'
-                      };
+                };
 
                 
-                          const tableBody = document.getElementById('resourceTableBody');
-                         const newRow = `
-                        <tr style="animation: fadeIn 0.5s ease;">
+                const tableBody = document.getElementById('resourceTableBody');
+                const newRow = `
+                    <tr style="animation: fadeIn 0.5s ease;">
                         <td><i class="fas fa-cube me-2"></i>${resourceName}</td>
                         <td><span class="badge" style="background: rgba(59, 130, 246, 0.2); color: #60a5fa;">${typeIcons[resourceType]} ${resourceType}</span></td>
                         <td>${initiative}</td>
@@ -674,24 +1074,30 @@ document.addEventListener('DOMContentLoaded', function() {
                 `;
                 tableBody.insertAdjacentHTML('beforeend', newRow);
 
-                
+            
                 form.reset();
                 const modal = bootstrap.Modal.getInstance(document.getElementById('addResourceModal'));
                 modal.hide();
 
-                
+               
                 showToast('Resource added successfully!', 'success');
             } else {
                 form.reportValidity();
             }
-        } function deleteRow(button) {
+        }
+
+        
+        function deleteRow(button) {
             if (confirm('Are you sure you want to delete this resource?')) {
                 const row = button.closest('tr');
                 row.style.animation = 'fadeOut 0.5s ease';
                 setTimeout(() => row.remove(), 500);
                 showToast('Resource deleted successfully!', 'danger');
             }
-        } function showToast(message, type) {
+        }
+
+        
+        function showToast(message, type) {
             const toast = document.createElement('div');
             toast.className = `alert alert-${type}`;
             toast.style.cssText = `
@@ -713,7 +1119,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 toast.style.animation = 'slideOutRight 0.5s ease';
                 setTimeout(() => toast.remove(), 500);
             }, 3000);
-        }function animateProgressBars() {
+        }
+
+        function animateProgressBars() {
             const progressBars = document.querySelectorAll('.progress-fill');
             progressBars.forEach(bar => {
                 const width = bar.style.width;
@@ -722,7 +1130,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     bar.style.width = width;
                 }, 100);
             });
-        } function observeElements() {
+        }
+
+      
+        function observeElements() {
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -739,6 +1150,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 observer.observe(card);
             });
         }
+
+       
         const style = document.createElement('style');
         style.textContent = `
             @keyframes slideInRight {
@@ -755,11 +1168,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         `;
         document.head.appendChild(style);
-
-
-
-        
-    </script>   
-
-    </body>
+    </script>
+</body>
 </html>
