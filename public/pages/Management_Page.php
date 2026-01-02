@@ -518,6 +518,28 @@ document.addEventListener('DOMContentLoaded', function() {
                 setTimeout(() => row.remove(), 500);
                 showToast('Resource deleted successfully!', 'danger');
             }
+        } function showToast(message, type) {
+            const toast = document.createElement('div');
+            toast.className = `alert alert-${type}`;
+            toast.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                z-index: 9999;
+                background: rgba(255, 255, 255, 0.2);
+                backdrop-filter: blur(15px);
+                border: 1px solid rgba(255, 255, 255, 0.3);
+                color: #fff;
+                padding: 15px 25px;
+                border-radius: 12px;
+                animation: slideInRight 0.5s ease;
+            `;
+            toast.textContent = message;
+            document.body.appendChild(toast);
+            setTimeout(() => {
+                toast.style.animation = 'slideOutRight 0.5s ease';
+                setTimeout(() => toast.remove(), 500);
+            }, 3000);
         }
 
 
