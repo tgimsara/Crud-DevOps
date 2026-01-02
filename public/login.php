@@ -1,6 +1,10 @@
 <?php
     require_once '../config.php';
 ?>
+<?php 
+include("includes/header.php");
+?>
+
 <!doctype html>
  <html lang="en">
   <head>
@@ -219,4 +223,9 @@ function togglePassword(fieldId) {
      </script>
    
   </body>
+
+  
+
+<?php
+include("includes/footer.php"); ?>
 </html>
