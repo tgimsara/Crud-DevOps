@@ -78,7 +78,7 @@
                                 
                                 <div class="text-center mt-4">
                                      <p class="switch-text"> Don't have an account? 
-                                        <a href="signup.php" onclick="switchForm('signup')" class="switch-link">Sign Up</a>
+                                        <a href="" onclick="switchForm('signup')" class="switch-link">Sign Up</a>
                                     </p>
                                 </div>
                             </form>
