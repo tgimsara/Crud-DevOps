@@ -21,8 +21,9 @@
         <div class="columns">
 
             <section>
+                <img src="https://i.pinimg.com/1200x/06/8e/6f/068e6fcc3dc0fd09fac0800197d7ccd6.jpg" alt="Description">
                 <h2>Description</h2>
-                <img src="" alt="">
+                
                 <p>Planting trees is a long-term commitment to the health of our planet and the well-being of future generations. 
                     Trees act as natural protectors of the environment by absorbing carbon dioxide, improving air quality, and supporting
                      ecosystems. In a world facing rapid urbanization and climate challenges, planting trees is a powerful way to restore
@@ -30,7 +31,7 @@
             </section>
 
             <section>
-                <img src="" alt="">
+                <img src="https://i.pinimg.com/1200x/07/ac/73/07ac7318a369dd1997f725b7ec3d6033.jpg" alt="Climate Protection">
                 <h2>Climate Protection</h2>
                 <p>Trees play a crucial role in reducing the effects of climate change. By absorbing carbon dioxide and releasing oxygen,
                      they help regulate global temperatures and reduce greenhouse gases in the atmosphere. Large-scale tree planting
@@ -38,7 +39,7 @@
             </section>
 
             <section>
-                <img src="" alt="">
+                <img src="https://i.pinimg.com/736x/1e/16/89/1e16897d6a20f03703b2682e94100082.jpg" alt="Supporting Biodiversity">
                 <h2>Supporting Biodiversity</h2>
                 <p>Trees create habitats for countless species of 
                     birds, insects, and animals. They form the foundation of healthy ecosystems, allowing biodiversity to thrive. When trees 
@@ -47,7 +48,7 @@
             </section>
 
             <section>
-                <img src="" alt="">
+                <img src="https://i.pinimg.com/736x/e6/10/a2/e610a219dd6cb949eb1b9e4aec0409d8.jpg" alt="Strengthening Communities">
                 <h2>Strengthening Communities</h2>
                 <p>Tree planting goes beyond environmental impact; it also improves quality of life. Green spaces promote
                      physical and mental well-being, reduce stress, and create more
@@ -57,7 +58,7 @@
             </section>
 
             <section>
-                <img src="" alt="">
+                <img src="https://i.pinimg.com/736x/0b/d9/14/0bd9149ba7eebd418a505cec36e36893.jpg" alt="Sustainable Future">
                 <h2>Sustainable Future</h2>
                 <p>
                 
