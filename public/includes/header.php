@@ -1,142 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
- <link rel="stylesheet" href="css/header.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Glass Navbar with Dropdowns</title>
+
+<style>
+/* ================== GLOBAL RESET ================== */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+/* ================== BODY ================== */
+body{
+  height:200vh;
+  background:linear-gradient(120deg,#0f0f14,#2a2a38);
+}
+
+/* ================== NAVBAR ================== */
+.glass-navbar{
+  position:fixed;
+  top:24px;
+  left:50%;
+  transform:translateX(-50%);
+  width:90%;
+  height:68px;
+  border-radius:22px;
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(20px) saturate(180%);
+  box-shadow:
+    0 20px 40px rgba(0,0,0,.35),
+    inset 0 1px 0 rgba(255,255,255,.35);
+  z-index:100;
+}
+
+/* ================== NAV LINKS ================== */
+.nav-desktop{
+  height:100%;
+  display:flex;
+  align-items:center;
+  gap:42px;
+  padding-left:36px;
+}
+
+.nav-item{
+  position:relative;
+  color:rgba(255,255,255,.92);
+  font-size:17px;
+  padding:10px 22px;
+  cursor:pointer;
+}
+
+/* ================== DROPDOWN ================== */
+.nav-dropdown{
+  position:absolute;
+  top:calc(100% + 18px);
+  left:50%;
+  transform:translateX(-50%) translateY(-10px);
+  min-width:220px;
+  background:rgba(255,255,255,.08);
+  backdrop-filter:blur(20px);
+  border-radius:16px;
+  padding:10px 0;
+  opacity:0;
+  visibility:hidden;
+  transition:.3s cubic-bezier(.2,.8,.2,1);
+}
+
+.nav-item:hover .nav-dropdown{
+  opacity:1;
+  visibility:visible;
+  transform:translateX(-50%) translateY(0);
+}
+
+.nav-dropdown a{
+  display:block;
+  padding:12px 24px;
+  text-decoration:none;
+  color:rgba(255,255,255,.9);
+}
+
+.nav-dropdown a:hover{
+  background:rgba(255,255,255,.15);
+}
+
+/* ================== RIGHT ACTIONS ================== */
+.nav-actions{
+  position:absolute;
+  right:36px;
+  top:50%;
+  transform:translateY(-50%);
+  display:flex;
+  gap:14px;
+}
+
+.logout-btn{
+  text-decoration:none;
+  padding:10px 18px;
+  border-radius:20px;
+  background:rgba(255,255,255,.1);
+  color:#fff;
+}
+
+.profile-img{
+  width:44px;
+  height:44px;
+  border-radius:50%;
+  overflow:hidden;
+}
+
+.profile-img img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* ================== BURGER ================== */
+.nav-burger{
+  display:none;
+  position:absolute;
+  left:24px;
+  top:50%;
+  transform:translateY(-50%);
+  width:42px;
+  height:42px;
+  border-radius:14px;
+  background:rgba(255,255,255,.15);
+  cursor:pointer;
+}
+
+.nav-burger span{
+  position:absolute;
+  left:10px;
+  right:10px;
+  height:2px;
+  background:#fff;
+  transition:.3s;
+}
+
+.nav-burger span:first-child{top:14px;}
+.nav-burger span:last-child{bottom:14px;}
+
+.nav-burger.active span:first-child{
+  transform:rotate(45deg);
+  top:20px;
+}
+
+.nav-burger.active span:last-child{
+  transform:rotate(-45deg);
+  bottom:20px;
+}
+
+/* ================== MOBILE MENU ================== */
+.mobile-panel{
+  position:fixed;
+  top:0;
+  left:-280px;
+  width:260px;
+  height:100vh;
+  background:rgba(255,255,255,.12);
+  backdrop-filter:blur(26px);
+  transition:.45s cubic-bezier(.2,.8,.2,1);
+  z-index:99;
+}
+
+.mobile-panel.open{
+  left:0;
+}
+
+.mobile-panel ul{
+  list-style:none;
+  padding:100px 22px;
+}
+
+.mobile-item{
+  margin-bottom:10px;
+}
+
+.mobile-label{
+  color:#fff;
+  font-size:18px;
+  padding:14px;
+  border-radius:14px;
+  cursor:pointer;
+}
+
+.mobile-submenu{
+  max-height:0;
+  overflow:hidden;
+  transition:max-height .4s cubic-bezier(.2,.8,.2,1);
+  padding-left:14px;
+}
+
+.mobile-item.active .mobile-submenu{
+  max-height:300px;
+}
+
+.mobile-submenu a{
+  display:block;
+  padding:10px 14px;
+  color:rgba(255,255,255,.85);
+  text-decoration:none;
+}
+
+/* ================== RESPONSIVE ================== */
+@media(max-width:768px){
+  .nav-desktop{display:none;}
+  .nav-burger{display:block;}
+}
+</style>
 </head>
 
+<body>
 
+<header class="glass-navbar" id="mainGlassNavbar">
 
-<header class="navbar">
-  <a href="..logout.php" style="position: absolute; right: 92px; top: 50%; transform: translateY(-50%); z-index: 4; background:rgba(228, 214, 214, 0.03); color: #fff; border: none; padding: 10px 18px; border-radius: 22px; font-size: 15px; cursor: pointer; transition: background 0.2s; text-decoration: none; display: inline-block;">
-    Logout
-  </a>
-  <div class="profile-photo" style="position: absolute; right: 36px; top: 50%; transform: translateY(-50%); z-index: 4; border-radius: 50%; overflow: hidden; width: 44px; height: 44px; background: #fff;">
-    <img src="images/profile-placeholder.png" alt="Profile Photo" style="width:44px; height:44px; border-radius:50%; object-fit:cover; display:block;" />
-  </div>
-  
-
-
-  <div class="burger">
-    <span></span>
-    <span></span>
+  <!-- Burger -->
+  <div class="nav-burger" id="navBurgerBtn">
+    <span></span><span></span>
   </div>
 
-  <div class="glass-highlight"></div>
+  <!-- Desktop Nav -->
+  <ul class="nav-desktop" id="desktopNavMenu">
 
- <!-- Replace your existing nav-links ul with this: -->
-<ul class="nav-links">
-  <li class="nav-item-dropdown">
-    <span class="nav-label">Project</span>
-    <div class="dropdown-menu" id="dropdown-project">
-      <a href="#project1">Project Overview</a>
-      <a href="#project2">Project Timeline</a>
-      <a href="#project3">Project Team</a>
-      <a href="#project4">Project Goals</a>
-    </div>
-  </li>
-  <li class="nav-item-dropdown">
-    <span class="nav-label">Resources</span>
-    <div class="dropdown-menu" id="dropdown-resources">
-      <a href="#resource1">Documentation</a>
-      <a href="#resource2">Downloads</a>
-      <a href="#resource3">Tutorials</a>
-      <a href="#resource4">API Reference</a>
-    </div>
-  </li>
-  <li class="nav-item-dropdown">
-    <span class="nav-label">Services</span>
-    <div class="dropdown-menu" id="dropdown-services">
-      <a href="#service1">Consulting</a>
-      <a href="#service2">Development</a>
-      <a href="#service3">Support</a>
-      <a href="#service4">Training</a>
-    </div>
-  </li>
-  <li class="nav-item-dropdown">
-    <span class="nav-label">Impact</span>
-    <div class="dropdown-menu" id="dropdown-impact">
-      <a href="#impact1">Case Studies</a>
-      <a href="#impact2">Testimonials</a>
-      <a href="#impact3">Statistics</a>
-      <a href="#impact4">Awards</a>
-    </div>
-  </li>
-</ul>
+    <li class="nav-item" id="navProject">
+      Project
+      <div class="nav-dropdown" id="dropdownProject">
+        <a href="#">Overview</a>
+        <a href="#">Timeline</a>
+        <a href="#">Team</a>
+        <a href="#">Goals</a>
+      </div>
+    </li>
 
-<!-- Replace mobile-menu ul with this: -->
-<div class="mobile-menu">
-  <ul>
-    <li class="mobile-nav-item">
-      <span class="mobile-nav-label">Project</span>
-      <div class="mobile-dropdown" id="mobile-dropdown-project">
-        <a href="#project1">Project Overview</a>
-        <a href="#project2">Project Timeline</a>
-        <a href="#project3">Project Team</a>
-        <a href="#project4">Project Goals</a>
+    <li class="nav-item" id="navResources">
+      Resources
+      <div class="nav-dropdown" id="dropdownResources">
+        <a href="#">Docs</a>
+        <a href="#">Downloads</a>
+        <a href="#">Tutorials</a>
+        <a href="#">API</a>
       </div>
     </li>
-    <li class="mobile-nav-item">
-      <span class="mobile-nav-label">Resources</span>
-      <div class="mobile-dropdown" id="mobile-dropdown-resources">
-        <a href="#resource1">Documentation</a>
-        <a href="#resource2">Downloads</a>
-        <a href="#resource3">Tutorials</a>
-        <a href="#resource4">API Reference</a>
+
+    <li class="nav-item" id="navServices">
+      Services
+      <div class="nav-dropdown" id="dropdownServices">
+        <a href="#">Consulting</a>
+        <a href="#">Development</a>
+        <a href="#">Support</a>
+        <a href="#">Training</a>
       </div>
     </li>
-    <li class="mobile-nav-item">
-      <span class="mobile-nav-label">Services</span>
-      <div class="mobile-dropdown" id="mobile-dropdown-services">
-        <a href="#service1">Consulting</a>
-        <a href="#service2">Development</a>
-        <a href="#service3">Support</a>
-        <a href="#service4">Training</a>
+
+    <li class="nav-item" id="navImpact">
+      Impact
+      <div class="nav-dropdown" id="dropdownImpact">
+        <a href="#">Cases</a>
+        <a href="#">Stats</a>
+        <a href="#">Awards</a>
       </div>
     </li>
-    <li class="mobile-nav-item">
-      <span class="mobile-nav-label">Impact</span>
-      <div class="mobile-dropdown" id="mobile-dropdown-impact">
-        <a href="#impact1">Case Studies</a>
-        <a href="#impact2">Testimonials</a>
-        <a href="#impact3">Statistics</a>
-        <a href="#impact4">Awards</a>
-      </div>
-    </li>
+
   </ul>
-</div>
+
+  <!-- Right Actions -->
+  <div class="nav-actions">
+    <a href="../logout.php" class="logout-btn">Logout</a>
+    <div class="profile-img">
+      <a href="user.php">
+        <img src="images/profile-placeholder.png" alt="Profile">
+      </a>
+    </div>
+  </div>
 </header>
 
-<script src="js/main.js"></script>
+<!-- Mobile Menu -->
+<nav class="mobile-panel" id="mobileMenuPanel">
+  <ul>
+
+    <li class="mobile-item">
+      <div class="mobile-label">Project</div>
+      <div class="mobile-submenu">
+        <a href="#">Overview</a>
+        <a href="#">Timeline</a>
+        <a href="#">Team</a>
+      </div>
+    </li>
+
+    <li class="mobile-item">
+      <div class="mobile-label">Resources</div>
+      <div class="mobile-submenu">
+        <a href="#">Docs</a>
+        <a href="#">Downloads</a>
+      </div>
+    </li>
+
+    <li class="mobile-item">
+      <div class="mobile-label">Services</div>
+      <div class="mobile-submenu">
+        <a href="#">Consulting</a>
+        <a href="#">Support</a>
+      </div>
+    </li>
+
+    <li class="mobile-item">
+      <div class="mobile-label">Impact</div>
+      <div class="mobile-submenu">
+        <a href="#">Cases</a>
+        <a href="#">Awards</a>
+      </div>
+    </li>
+
+  </ul>
+</nav>
+
 <script>
-    // Add this to the end of your existing JavaScript
+/* ================== BURGER TOGGLE ================== */
+const burgerBtn = document.getElementById("navBurgerBtn");
+const mobilePanel = document.getElementById("mobileMenuPanel");
 
-// Mobile dropdown toggle
-const mobileNavItems = document.querySelectorAll(".mobile-nav-item");
+burgerBtn.addEventListener("click",()=>{
+  burgerBtn.classList.toggle("active");
+  mobilePanel.classList.toggle("open");
+});
 
-mobileNavItems.forEach(item => {
-  const label = item.querySelector(".mobile-nav-label");
-  
-  label.addEventListener("click", (e) => {
-    e.stopPropagation();
-    
-    // Close other dropdowns
-    mobileNavItems.forEach(otherItem => {
-      if (otherItem !== item) {
-        otherItem.classList.remove("active");
-      }
+/* ================== MOBILE DROPDOWNS ================== */
+document.querySelectorAll(".mobile-label").forEach(label=>{
+  label.addEventListener("click",()=>{
+    const parent = label.parentElement;
+
+    document.querySelectorAll(".mobile-item").forEach(item=>{
+      if(item !== parent) item.classList.remove("active");
     });
-    
-    // Toggle current dropdown
-    item.classList.toggle("active");
+
+    parent.classList.toggle("active");
   });
 });
+</script>
 
-// Close mobile menu when clicking dropdown links
-const mobileDropdownLinks = document.querySelectorAll(".mobile-dropdown a");
-
-mobileDropdownLinks.forEach(link => {
-  link.addEventListener("click", () => {
-    burger.classList.remove("active");
-    mobileMenu.classList.remove("open");
-    mobileNavItems.forEach(item => item.classList.remove("active"));
-  });
-});
-    </script>
+</body>
+</html>
