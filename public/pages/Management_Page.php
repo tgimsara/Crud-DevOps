@@ -394,10 +394,10 @@
 
 document.addEventListener('DOMContentLoaded', function() {
            
-           const pieCtx = document.getElementById('pieChart').getContext('2d');
-           const pieChart = new Chart(pieCtx, {
-               type: 'doughnut',
-               data: {
+                  const pieCtx = document.getElementById('pieChart').getContext('2d');
+                  const pieChart = new Chart(pieCtx, {
+                   type: 'doughnut',
+                   data: {
                    labels: ['Financial', 'Materials', 'Energy', 'Human Effort', 'Water'],
                    datasets: [{
                        data: [120000, 450, 320, 240, 800],
@@ -418,10 +418,10 @@ document.addEventListener('DOMContentLoaded', function() {
                        borderWidth: 2
                    }]
                },
-               options: {
-                   responsive: true,
-                   maintainAspectRatio: false,
-                   plugins: {
+                      options: {
+                      responsive: true,
+                      maintainAspectRatio: false,
+                      plugins: {
                        legend: {
                            position: 'bottom',
                            labels: {
@@ -443,7 +443,7 @@ document.addEventListener('DOMContentLoaded', function() {
                }
            });
 
-           
+
 
         
     </script>   
