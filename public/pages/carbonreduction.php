@@ -339,3 +339,442 @@
             color: var(--text-secondary);
             text-align: justify;
         }
+
+
+
+        .card-content h2::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--accent-green), var(--accent-blue));
+            border-radius: 1px;
+            transition: width 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .liquid-glass-card:hover .card-content h2::after {
+            width: 60px;
+        }
+
+        
+        .liquid-glass-card:nth-child(1) { transition-delay: 0.1s; }
+        .liquid-glass-card:nth-child(2) { transition-delay: 0.2s; }
+        .liquid-glass-card:nth-child(3) { transition-delay: 0.3s; }
+        .liquid-glass-card:nth-child(4) { transition-delay: 0.4s; }
+
+        
+        .stats-bar {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .stat-item {
+            background: var(--glass-bg);
+            backdrop-filter: blur(var(--blur-amount)) saturate(180%);
+            -webkit-backdrop-filter: blur(var(--blur-amount)) saturate(180%);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 25px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transform: translateY(50px);
+            opacity: 0;
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .stat-item.active {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .stat-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+        }
+
+        .stat-item:hover {
+            transform: translateY(-5px);
+            border-color: rgba(255,255,255,0.4);
+        }
+
+        .stat-number {
+            font-size: 36px;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--accent-green), var(--accent-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-top: 8px;
+        }
+
+        
+        .cta-section {
+            text-align: center;
+            margin-top: 50px;
+            transform: translateY(50px);
+            opacity: 0;
+            animation: slideUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.5s forwards;
+        }
+
+        .liquid-glass-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 18px 40px;
+            background: rgba(52, 199, 89, 0.3);
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            border: 1px solid rgba(52, 199, 89, 0.5);
+            border-radius: 50px;
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .liquid-glass-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .liquid-glass-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px rgba(52, 199, 89, 0.3);
+            border-color: rgba(52, 199, 89, 0.8);
+            background: rgba(52, 199, 89, 0.4);
+        }
+
+        .liquid-glass-button:hover::before {
+            left: 100%;
+        }
+
+        
+        @keyframes slideUp {
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        
+        @media (max-width: 992px) {
+            .columns {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats-bar {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 576px) {
+            .main-container {
+                padding: 20px 15px;
+            }
+
+            .liquid-glass-header {
+                padding: 30px 20px;
+                border-radius: 20px;
+            }
+
+            .stats-bar {
+                grid-template-columns: 1fr;
+            }
+
+            .card-image-wrapper {
+                height: 220px;
+            }
+        }
+
+        
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(255,255,255,0.05);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255,255,255,0.2);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255,255,255,0.3);
+        }
+
+        
+        .mouse-glow {
+            position: fixed;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(52, 199, 89, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 0;
+            transform: translate(-50%, -50%);
+            transition: opacity 0.3s ease;
+        }
+    </style>
+</head>
+
+
+
+<body>
+   
+    <div class="background-layer">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+        <div class="orb orb-4"></div>
+    </div>
+
+    
+    <div class="mouse-glow" id="mouseGlow"></div>
+
+    
+    <div class="main-container">
+        
+        
+        <header class="liquid-glass-header">
+            <div class="header-icon">🌍</div>
+            <h1>Reducing Carbon Dioxide Emissions</h1>
+            <p class="subtitle">Together we can create a sustainable future. Every action counts in protecting our planet for generations to come.</p>
+        </header>
+
+        
+        <div class="columns">
+            
+            
+            <section class="liquid-glass-card">
+                <div class="card-image-wrapper">
+                    <img src="https://i.pinimg.com/736x/56/6b/8e/566b8ebdf708a2be29b46e76b5548434.jpg" alt="Climate Crisis">
+                    <div class="image-frost-overlay"></div>
+                    <div class="card-badge">
+                        <span>🔥</span> Climate Action
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h2>
+                        <span class="icon">🌡️</span>
+                        The Climate Crisis
+                    </h2>
+                    <p>
+                        Climate change is no longer a distant problem — it's something we experience every day. Rising temperatures, unpredictable weather, and increasing pollution are all connected to one major factor: carbon dioxide (CO₂) emissions. Reducing these emissions is one of the most important steps we can take toward protecting our planet and our future.
+                    </p>
+                </div>
+            </section>
+
+            
+            <section class="liquid-glass-card">
+                <div class="card-image-wrapper">
+                    <img src="https://i.pinimg.com/736x/c0/31/cc/c031cc783295417d2ee348958987918a.jpg" alt="Why It Matters">
+                    <div class="image-frost-overlay"></div>
+                    <div class="card-badge">
+                        <span>💡</span> Awareness
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h2>
+                        <span class="icon">🎯</span>
+                        Why Reducing CO₂ Matters
+                    </h2>
+                    <p>
+                        High levels of carbon dioxide trap heat in the atmosphere, leading to global warming and climate change. This affects ecosystems, food security, water availability, and human health. Communities with fewer resources often suffer the most, making this not just an environmental issue, but a social one as well.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Card 3 -->
+            <section class="liquid-glass-card">
+                <div class="card-image-wrapper">
+                    <img src="https://i.pinimg.com/736x/24/4a/16/244a16bd09aa37b3715723955f29804d.jpg" alt="Make a Difference">
+                    <div class="image-frost-overlay"></div>
+                    <div class="card-badge">
+                        <span>✨</span> Solutions
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h2>
+                        <span class="icon">🌱</span>
+                        How We Can Make a Difference
+                    </h2>
+                    <p>
+                        Reducing carbon emissions does not require drastic lifestyle changes. It begins with awareness, responsibility, and smarter choices. By reducing CO₂ emissions, we can slow down climate change, improve air quality, protect natural ecosystems, and create healthier and more sustainable communities.
+                    </p>
+                </div>
+            </section>
+
+           
+            <section class="liquid-glass-card">
+                <div class="card-image-wrapper">
+                    <img src="https://i.pinimg.com/1200x/4f/2c/ee/4f2cee3de5b873546d1224a0a617066c.jpg" alt="Measurable Impact">
+                    <div class="image-frost-overlay"></div>
+                    <div class="card-badge">
+                        <span>📊</span> Impact
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h2>
+                        <span class="icon">📈</span>
+                        Turning Goals into Impact
+                    </h2>
+                    <p>
+                        Through our platform, organizations and communities can plan sustainability initiatives focused on lowering carbon emissions, track resource usage, and measure real impact over time. By visualizing progress and encouraging collaboration, we help turn environmental goals into practical actions.
+                    </p>
+                </div>
+            </section>
+        </div>
+
+          
+        <div class="stats-bar">
+            <div class="stat-item">
+                <div class="stat-number" data-target="36">0</div>
+                <div class="stat-label">Billion Tons CO₂/Year</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-target="421">0</div>
+                <div class="stat-label">PPM Atmospheric CO₂</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-target="1.1">0</div>
+                <div class="stat-label">°C Global Warming</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-target="50">0</div>
+                <div class="stat-label">% Reduction Goal</div>
+            </div>
+        </div>
+
+
+  
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Reveal on Scroll Animation
+        function revealOnScroll() {
+            const elements = document.querySelectorAll('.liquid-glass-card, .stat-item');
+            
+            elements.forEach(el => {
+                const rect = el.getBoundingClientRect();
+                const windowHeight = window.innerHeight;
+                
+                if (rect.top < windowHeight - 100) {
+                    el.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', revealOnScroll);
+        window.addEventListener('load', revealOnScroll);
+
+        // Mouse Glow Effect
+        const mouseGlow = document.getElementById('mouseGlow');
+        
+        document.addEventListener('mousemove', (e) => {
+            mouseGlow.style.left = e.clientX + 'px';
+            mouseGlow.style.top = e.clientY + 'px';
+        });
+
+        // Counter Animation for Stats
+        function animateCounters() {
+            const counters = document.querySelectorAll('.stat-number');
+            
+            counters.forEach(counter => {
+                const target = parseFloat(counter.getAttribute('data-target'));
+                const isDecimal = target % 1 !== 0;
+                const duration = 2000;
+                const increment = target / (duration / 16);
+                let current = 0;
+                
+                const updateCounter = () => {
+                    current += increment;
+                    if (current < target) {
+                        counter.textContent = isDecimal ? current.toFixed(1) : Math.floor(current);
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        counter.textContent = isDecimal ? target.toFixed(1) : target;
+                    }
+                };
+                
+                // Start animation when stat item is visible
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            updateCounter();
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.5 });
+                
+                observer.observe(counter.parentElement);
+            });
+        }
+
+        animateCounters();
+
+        // Card 3D Tilt Effect
+        const cards = document.querySelectorAll('.liquid-glass-card');
+        
+        cards.forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                const rotateX = (y - centerY) / 20;
+                const rotateY = (centerX - x) / 20;
+                
+                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-10px) scale(1.02)`;
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0) scale(1)';
+            });
+        });
+
+        // Parallax Effect on Orbs
+        document.addEventListener('mousemove', (e) => {
+            const orbs = document.querySelectorAll('.orb');
+            const mouseX = e.clientX / window.innerWidth;
+            const mouseY = e.clientY / window.innerHeight;
+            
+            orbs.forEach((orb, index) => {
+                const speed = (index + 1) * 20;
+                const x = (mouseX - 0.5) * speed;
+                const y = (mouseY - 0.5) * speed;
+                orb.style.transform = `translate(${x}px, ${y}px)`;
+            });
+        });
+    </script>
+</body>
+</html>
+
