@@ -7,6 +7,46 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+
+
+        <style>
+
+
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #7e22ce 100%);
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(16, 185, 129, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.05) 0%, transparent 50%);
+            z-index: 0;
+            animation: bgShift 20s ease-in-out infinite;
+        }
+
+        @keyframes bgShift {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        </style>
+
     </head>
     <body>
     <div class="floating-elements">
@@ -442,6 +482,146 @@ document.addEventListener('DOMContentLoaded', function() {
                    }
                }
            });
+
+
+                 function addResource() {
+                 const form = document.getElementById('addResourceForm');
+                 if (form.checkValidity()) {
+                
+                const resourceName = document.getElementById('resourceName').value;
+                const resourceType = document.getElementById('resourceType').value;
+                const initiative = document.getElementById('initiative').value;
+                const allocatedLimit = document.getElementById('allocatedLimit').value;
+                const usedAmount = document.getElementById('usedAmount').value;
+                
+                
+                const usagePercent = Math.floor(Math.random() * 100);
+                
+               
+                     let statusClass, statusIcon, statusText;
+                    if (usagePercent < 80) {
+                    statusClass = 'status-safe';
+                    statusIcon = 'fas fa-check-circle';
+                    statusText = 'Safe';
+                    } else if (usagePercent < 100) {
+                    statusClass = 'status-warning';
+                    statusIcon = 'fas fa-exclamation-triangle';
+                    statusText = 'Warning';
+                     } else {
+                    statusClass = 'status-danger';
+                    statusIcon = 'fas fa-exclamation-circle';
+                    statusText = 'Overuse';
+                     }
+
+               
+                     const typeIcons = {
+                    'Financial': '💰',
+                    'Material': '📦',
+                    'Energy': '⚡',
+                    'Human': '⏱',
+                    'Water': '🚿'
+                      };
+
+                
+                          const tableBody = document.getElementById('resourceTableBody');
+                         const newRow = `
+                        <tr style="animation: fadeIn 0.5s ease;">
+                        <td><i class="fas fa-cube me-2"></i>${resourceName}</td>
+                        <td><span class="badge" style="background: rgba(59, 130, 246, 0.2); color: #60a5fa;">${typeIcons[resourceType]} ${resourceType}</span></td>
+                        <td>${initiative}</td>
+                        <td>${usedAmount}</td>
+                        <td>${allocatedLimit}</td>
+                        <td>${usagePercent}%</td>
+                        <td><span class="status-badge ${statusClass}"><i class="${statusIcon}"></i>${statusText}</span></td>
+                        <td>
+                            <button class="btn-action btn-edit"><i class="fas fa-edit"></i></button>
+                            <button class="btn-action btn-delete" onclick="deleteRow(this)"><i class="fas fa-trash"></i></button>
+                        </td>
+                    </tr>
+                `;
+                tableBody.insertAdjacentHTML('beforeend', newRow);
+
+                
+                form.reset();
+                const modal = bootstrap.Modal.getInstance(document.getElementById('addResourceModal'));
+                modal.hide();
+
+                
+                showToast('Resource added successfully!', 'success');
+            } else {
+                form.reportValidity();
+            }
+        } function deleteRow(button) {
+            if (confirm('Are you sure you want to delete this resource?')) {
+                const row = button.closest('tr');
+                row.style.animation = 'fadeOut 0.5s ease';
+                setTimeout(() => row.remove(), 500);
+                showToast('Resource deleted successfully!', 'danger');
+            }
+        } function showToast(message, type) {
+            const toast = document.createElement('div');
+            toast.className = `alert alert-${type}`;
+            toast.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                z-index: 9999;
+                background: rgba(255, 255, 255, 0.2);
+                backdrop-filter: blur(15px);
+                border: 1px solid rgba(255, 255, 255, 0.3);
+                color: #fff;
+                padding: 15px 25px;
+                border-radius: 12px;
+                animation: slideInRight 0.5s ease;
+            `;
+            toast.textContent = message;
+            document.body.appendChild(toast);
+            setTimeout(() => {
+                toast.style.animation = 'slideOutRight 0.5s ease';
+                setTimeout(() => toast.remove(), 500);
+            }, 3000);
+        }function animateProgressBars() {
+            const progressBars = document.querySelectorAll('.progress-fill');
+            progressBars.forEach(bar => {
+                const width = bar.style.width;
+                bar.style.width = '0';
+                setTimeout(() => {
+                    bar.style.width = width;
+                }, 100);
+            });
+        } function observeElements() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.glass-card').forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                card.style.transition = 'all 0.6s ease';
+                observer.observe(card);
+            });
+        }
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes slideInRight {
+                from { transform: translateX(100%); opacity: 0; }
+                to { transform: translateX(0); opacity: 1; }
+            }
+            @keyframes slideOutRight {
+                from { transform: translateX(0); opacity: 1; }
+                to { transform: translateX(100%); opacity: 0; }
+            }
+            @keyframes fadeOut {
+                from { opacity: 1; }
+                to { opacity: 0; }
+            }
+        `;
+        document.head.appendChild(style);
 
 
 
