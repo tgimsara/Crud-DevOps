@@ -266,6 +266,20 @@
             document.querySelectorAll('.partner-card').forEach(card => {
                 observer.observe(card);
             });
+             // Add parallax effect to floating shapes
+             document.addEventListener('mousemove', function(e) {
+                const shapes = document.querySelectorAll('.shape');
+                const mouseX = e.clientX / window.innerWidth;
+                const mouseY = e.clientY / window.innerHeight;
+
+                shapes.forEach((shape, index) => {
+                    const speed = (index + 1) * 20;
+                    const x = (mouseX - 0.5) * speed;
+                    const y = (mouseY - 0.5) * speed;
+                    shape.style.transform = `translate(${x}px, ${y}px)`;
+                });
+            });
+        });
 
 </script>
 </body>
