@@ -109,6 +109,26 @@
             </section>
 
 
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<script>
+    function revealOnScroll() {
+        document.querySelectorAll('section').forEach(sec => {
+            const top = sec.getBoundingClientRect().top;
+            const height = window.innerHeight;
+            if (top < height - 100) {
+                sec.classList.add('active');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', revealOnScroll);
+</script>
+
+
+
 
 
 
