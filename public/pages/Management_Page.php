@@ -540,6 +540,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 toast.style.animation = 'slideOutRight 0.5s ease';
                 setTimeout(() => toast.remove(), 500);
             }, 3000);
+        }function animateProgressBars() {
+            const progressBars = document.querySelectorAll('.progress-fill');
+            progressBars.forEach(bar => {
+                const width = bar.style.width;
+                bar.style.width = '0';
+                setTimeout(() => {
+                    bar.style.width = width;
+                }, 100);
+            });
         }
 
 
