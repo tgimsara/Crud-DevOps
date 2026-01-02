@@ -173,6 +173,9 @@
             font-size: 0.9rem;
             margin-top: 10px;
         }
+        .resource-table-container {
+            animation: fadeIn 1.4s ease;
+        }
 
 
         </style>
