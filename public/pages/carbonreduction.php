@@ -7,7 +7,7 @@
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <title>Achieve Gender Equality</title>
+    <title>Reducing Carbon Dioxide Emissions</title>
 
     <style>
         body {
@@ -37,19 +37,17 @@
         }
 
         .columns {
-    display: flex;
-    flex-wrap: wrap; 
-    gap: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 40px;
+    row-gap: 20px;
 }
 
-.columns section {
-    width: calc(50% - 20px);
-}
-}
+
 
         section {
             break-inside: avoid;
-            margin-bottom: 50px;
+            margin-bottom: 10px;
             opacity: 100%;
             transform: translateY(60px);
             transition: all 0.8s ease;
@@ -64,6 +62,7 @@
             width: 100%;
             border-radius: 10px;
             margin-bottom: 12px;
+            height: 300px;
         }
 
         h2 {
@@ -78,14 +77,15 @@
         }
 
         @media (max-width: 768px) {
-            .columns {
-                column-count: 1;
-            }
+    .columns {
+        grid-template-columns: 1fr;
+    }
 
-            h1 {
-                font-size: 28px;
-            }
-        }
+    h1 {
+        font-size: 28px;
+    }
+}
+
     </style>
     
 
@@ -100,7 +100,7 @@
 
         <h1 style="text-align: center; color: #333;">Reducing Carbon Dioxide Emissions</h1>
 
-        <div class="columns" style="display: flex; justify-content: space-between;">
+        <div class="columns"  justify-content: space-between;">
 
        
 
@@ -119,7 +119,7 @@
             </section>
 
             <section>
-                <img src="https://i.pinimg.com/736x/1f/33/50/1f335020152d16eb7d8d9814f3933af0.jpg" alt="Why Reducing CO₂ Emissions Matters">
+                <img src="https://i.pinimg.com/736x/c0/31/cc/c031cc783295417d2ee348958987918a.jpg" alt="Why Reducing CO₂ Emissions Matters">
                 <h2>Why Reducing CO₂ Emissions Matters</h2>
                 <p>
                 High levels of carbon dioxide trap heat in the atmosphere, leading to global warming and climate change.
@@ -143,7 +143,7 @@
             </section>
 
             <section>
-                <img src="" alt=" ">
+                <img src="https://i.pinimg.com/1200x/4f/2c/ee/4f2cee3de5b873546d1224a0a617066c.jpg" alt="Turning Goals into Measurable Impact">
                 <h2>Turning Goals into Measurable Impact</h2>
                 <p>
                 Through our platform, organizations and communities can plan sustainability initiatives focused on lowering carbon emissions,
