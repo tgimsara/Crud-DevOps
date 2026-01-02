@@ -55,6 +55,74 @@
             border: 1px solid rgba(255, 255, 255, 0.2);
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
         }
+        .partner-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            border-radius: 25px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .partner-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .partner-card:hover::before {
+            left: 100%;
+        }
+
+        .partner-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .partner-image-wrapper {
+            width: 180px;
+            height: 180px;
+            margin: 0 auto 25px;
+            position: relative;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .partner-card:hover .partner-image-wrapper {
+            transform: scale(1.08) rotate(5deg);
+        }
+
+        .partner-image {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid rgba(255, 255, 255, 0.4);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .partner-name {
+            color: #fff;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-top: 10px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+            letter-spacing: 0.5px;
+        }
     </style>
 
 </head>
