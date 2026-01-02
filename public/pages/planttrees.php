@@ -69,6 +69,18 @@
                 </p>
             </section>
 
+            
+            <section>
+                <img src="https://i.pinimg.com/736x/4d/0f/bc/4d0fbc67a505a15661a7a7e9ee9faf70.jpg" alt="A Step Toward a Greener Tomorrow">
+                <h2>A Step Toward a Greener Tomorrow</h2>
+                <p>
+                Planting trees is not just about adding greenery to our surroundings; it is about taking responsibility for the future of our
+                 planet. Every tree planted contributes to cleaner air, healthier ecosystems, and stronger communities. When we commit 
+                to nurturing trees and protecting green spaces, we create a lasting impact that supports life today and for generations to come.
+                </p>
+            </section>
+
+
         
         </div>
     </div>

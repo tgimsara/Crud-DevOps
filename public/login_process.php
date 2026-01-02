@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $_SESSION['user_name'] = $user['name'];
         $_SESSION['user_email'] = $user['email'];
         
-        echo json_encode(['success' => true, 'message' => 'Login successful']);
+        
     } else {
         echo json_encode(['success' => false, 'message' => 'Invalid email or password']);
     }

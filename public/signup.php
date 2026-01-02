@@ -29,7 +29,7 @@
                     <div class="glass-card">
                         <div class="card-body p-4 p-md-5">
                             <div class="text-center mb-4">
-                                <h2 class="welcome-text">Sign Up </h2>
+                                <h2 class="welcome-text">Register Now </h2>
                                 <p class="subtitle"> Create New account </p>
                             </div>
 
