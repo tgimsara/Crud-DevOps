@@ -26,11 +26,21 @@
                     <div class="glass-card">
                         <div class="card-body p-4 p-md-5">
                             <div class="text-center mb-4">
-                                <h2 class="welcome-text"> Welcome Back </h2>
-                                <p class="subtitle"> Sign in to continue to your account </p>
+                                <h2 class="welcome-text">Sign Up </h2>
+                                <p class="subtitle"> Create New account </p>
                             </div>
 
                             <form id="loginForm" class="auth-form" style="display: block;">
+                                <div class="mb-3">
+                                    <label for="Full name" class="form-label">Full Name</label>
+                                    <div  class="input-group">
+                                        <span class="input-icon">
+                                            <i class="fas fa-envelope"></i>
+                                        </span>
+                                        <input  type="name"  class="form-control glass-input" id="name" name="email" placeholder="Enter your full name" required>
+                                    </div>
+                                </div>
+
                                 <div class="mb-3">
                                     <label for="loginEmail" class="form-label">Email Address</label>
                                     <div  class="input-group">
@@ -54,6 +64,22 @@
                                     </div>
                                 </div>
                                 
+
+                                <div class="mb-3">
+                                    <label for="ConfirmPassword" class="form-label">Confirm Password</label>
+                                    <div class="input-group">
+                                        <span class="input-icon">
+                                            <i class="fas fa-lock"></i>
+                                        </span>
+                                        <input type="password" class="form-control glass-input" id="newPassword" name="password" placeholder="confirm your password" required>
+                                        <span class="password-toggle" onclick="togglePassword('loginPassword')">
+                                            <i class="fas fa-eye"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                
+
+                                
                                 <div class="d-flex justify-content-between align-items-center mb-4">
                                     <div class="form-check">
                                         <input class="form-check-input" type="checkbox" id="rememberMe">
@@ -65,7 +91,7 @@
                                 </div>
 
                                  <button type="submit" class="btn btn-primary glass-btn w-100 mb-3">
-                                     <i class="fas fa-sign-in-alt me-2"></i> Sign In
+                                     <i class="fas fa-sign-in-alt me-2"></i> Sign Up
                                 </button>
                                 
                                 <div class="divider">
@@ -75,12 +101,13 @@
                                 <button type="button" class="btn btn-google glass-btn w-100 mb-3" onclick="googleLogin()">
                                      <i class="fab fa-google me-2"></i> Continue with Google
                                 </button>
-                                
                                 <div class="text-center mt-4">
-                                     <p class="switch-text"> Don't have an account? 
-                                        <a href="signup.php" onclick="switchForm('signup')" class="switch-link">Sign Up</a>
+                                    <p class="switch-text"> Already have an account? 
+                                        <a href="login.php" onclick="switchForm('login')" class="switch-link">Sign In</a>
                                     </p>
                                 </div>
+                                
+                                
                             </form>
 
                             <form id="signupForm" class="auth-form" style="display: none;">
