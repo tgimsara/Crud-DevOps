@@ -6,7 +6,7 @@
 <title>Glass Navbar with Dropdowns</title>
 
 <style>
-/* ================== GLOBAL RESET ================== */
+
 *{
   margin:0;
   padding:0;
@@ -14,13 +14,11 @@
   font-family:'Poppins',sans-serif;
 }
 
-/* ================== BODY ================== */
 body{
   height:200vh;
   background:linear-gradient(120deg,#0f0f14,#2a2a38);
 }
 
-/* ================== NAVBAR ================== */
 .glass-navbar{
   position:fixed;
   top:24px;
@@ -37,7 +35,7 @@ body{
   z-index:100;
 }
 
-/* ================== NAV LINKS ================== */
+
 .nav-desktop{
   height:100%;
   display:flex;
@@ -54,7 +52,7 @@ body{
   cursor:pointer;
 }
 
-/* ================== DROPDOWN ================== */
+
 .nav-dropdown{
   position:absolute;
   top:calc(100% + 18px);
@@ -87,7 +85,7 @@ body{
   background:rgba(255,255,255,.15);
 }
 
-/* ================== RIGHT ACTIONS ================== */
+
 .nav-actions{
   position:absolute;
   right:36px;
@@ -118,7 +116,7 @@ body{
   object-fit:cover;
 }
 
-/* ================== BURGER ================== */
+
 .nav-burger{
   display:none;
   position:absolute;
@@ -154,7 +152,7 @@ body{
   bottom:20px;
 }
 
-/* ================== MOBILE MENU ================== */
+
 .mobile-panel{
   position:fixed;
   top:0;
