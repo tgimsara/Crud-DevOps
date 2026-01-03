@@ -438,7 +438,7 @@
         color: var(--primary-color);
     }
 
-    /* Profile Stats */
+    
     .profile-stats {
         display: flex;
         gap: 30px;
@@ -523,7 +523,7 @@
         color: var(--text-light);
     }
 
-    /* Tabs */
+    
     .profile-tabs {
         border-bottom: 2px solid rgba(0, 0, 0, 0.05);
         margin-bottom: 30px;
@@ -702,7 +702,7 @@
         color: white;
     }
 
-    /* Upgrade Card */
+    
     .upgrade-card {
         padding: 35px;
         text-align: center;
