@@ -325,7 +325,7 @@
                     <h1 class="hero-title">Turn Sustainability Goals Into Action!</h1>
                     <p class="hero-subtitle">Manage projects, resources, and impact in one simple platform</p>
                     <div class="d-flex flex-wrap">
-                        <button class="glass-btn btn-secondary-glass">Learn More</button>
+                        <button class="glass-btn btn-secondary-glass"><a href="about.php">Learn More</a></button>
                     </div>
                 </div>
 
