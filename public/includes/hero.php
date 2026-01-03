@@ -335,13 +335,7 @@
                         <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=700&fit=crop" alt="Professional Designer" class="hero-image">
                         
                         
-                        <div class="testimonial-card">
-                            <div class="testimonial-avatar">SA</div>
-                            <div class="testimonial-content">
-                                <h6>Seyi Ajibona</h6>
-                                <p>The resources on this platform are lit 🔥</p>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
