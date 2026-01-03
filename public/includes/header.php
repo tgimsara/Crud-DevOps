@@ -263,7 +263,7 @@ body{
 
   <div class="nav-actions">
     <?php if ($isLoggedIn): ?>
-      <a href="../logout.php" class="logout-btn">Logout</a>
+      <a href="logout.php" class="logout-btn">Logout</a>
       <div class="profile-img">
         <a href="user.php">
           <img src="images/profile-placeholder.png" alt="Profile">
