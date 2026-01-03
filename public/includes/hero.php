@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premium Design Assets - Hero Section</title>
+    <title>Learn more</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
@@ -325,7 +325,7 @@
                     <h1 class="hero-title">Turn Sustainability Goals Into Action!</h1>
                     <p class="hero-subtitle">Manage projects, resources, and impact in one simple platform</p>
                     <div class="d-flex flex-wrap">
-                        <button class="glass-btn btn-secondary-glass">Learn More</button>
+                        <button class="glass-btn btn-secondary-glass"><a href="about.php">Learn More</a></button>
                     </div>
                 </div>
 
