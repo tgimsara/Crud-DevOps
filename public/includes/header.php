@@ -235,7 +235,7 @@ body{
     <li class="nav-item" id="navResources">
       Resources
       <div class="nav-dropdown" id="dropdownResources">
-        <a href="https://en.wikipedia.org/wiki/Sustainable_Development_Goals">Docs</a>
+        <a href="https://en.wikipedia.org/wiki/Sustainable_Development_Goals">Read</a>
       </div>
     </li>
 
