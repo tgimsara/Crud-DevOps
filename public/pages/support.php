@@ -93,15 +93,9 @@ $conn->query($create_table);
         <header class="header">
             <div class="header-content">
                 <div class="logo-section">
-                    <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                        <circle cx="12" cy="12" r="10"/>
-                        <path d="M12 6v6l4 2"/>
-                    </svg>
                     <h1>Support Center</h1>
                 </div>
                 <nav class="nav-links">
-                    <a href="dashboard.php">Dashboard</a>
-                    <a href="initiatives.php">Initiatives</a>
                     <a href="support.php" class="active">Support</a>
                 </nav>
             </div>
@@ -232,13 +226,13 @@ $conn->query($create_table);
                                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
                                 <polyline points="22,6 12,13 2,6"/>
                             </svg>
-                            <span>support@sustainableplatform.org</span>
+                            <span>support@cruddevops.org</span>
                         </div>
                         <div class="contact-item">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
                                 <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
                             </svg>
-                            <span>+1 (555) 123-4567</span>
+                            <span>+94 768322413</span>
                         </div>
                         <p class="response-time">Average response time: 4-6 hours</p>
                     </section>
@@ -306,16 +300,7 @@ $conn->query($create_table);
             </section>
         </main>
 
-        <footer class="footer">
-            <div class="footer-content">
-                <p>&copy; 2026 Sustainability Platform. Supporting SDGs 12, 13 & 17.</p>
-                <div class="footer-links">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
-                    <a href="#">Contact</a>
-                </div>
-            </div>
-        </footer>
+       
     </div>
 
     <script>
