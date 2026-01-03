@@ -5,50 +5,39 @@ require_once '../config.php';
 header('Content-Type: application/json');
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $email = mysqli_real_escape_string($conn, $_POST['email']);
-    $password = $_POST['password'];
+    $email = trim($_POST['email'] ?? '');
+    $password = $_POST['password'] ?? '';
     
-    // Use prepared statement for security
-    $stmt = mysqli_prepare($conn, "SELECT * FROM users WHERE email = ?");
-    mysqli_stmt_bind_param($stmt, "s", $email);
-    mysqli_stmt_execute($stmt);
-    $result = mysqli_stmt_get_result($stmt);
+    if (empty($email) || empty($password)) {
+        echo json_encode(['success' => false, 'message' => 'Email and password are required']);
+        exit;
+    }
     
-    if (mysqli_num_rows($result) == 1) {
-        $user = mysqli_fetch_assoc($result);
+    // Use prepared statement
+    $stmt = $conn->prepare("SELECT id, name, email, password FROM users WHERE email = ?");
+    $stmt->bind_param("s", $email);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    
+    if ($result->num_rows === 1) {
+        $user = $result->fetch_assoc();
         
-        // Verify password (if using hashed passwords)
+        // Verify password
         if (password_verify($password, $user['password'])) {
-            // Set session
             $_SESSION['user_id'] = $user['id'];
             $_SESSION['user_name'] = $user['name'];
             $_SESSION['user_email'] = $user['email'];
             
-            echo json_encode([
-                'success' => true, 
-                'message' => 'Login successful!',
-                'redirect' => 'profile.php'
-            ]);
+            echo json_encode(['success' => true, 'message' => 'Login successful']);
         } else {
-            echo json_encode([
-                'success' => false, 
-                'message' => 'Invalid email or password'
-            ]);
+            echo json_encode(['success' => false, 'message' => 'Invalid email or password']);
         }
     } else {
-        echo json_encode([
-            'success' => false, 
-            'message' => 'Invalid email or password'
-        ]);
+        echo json_encode(['success' => false, 'message' => 'Invalid email or password']);
     }
     
-    mysqli_stmt_close($stmt);
+    $stmt->close();
 } else {
-    echo json_encode([
-        'success' => false, 
-        'message' => 'Invalid request method'
-    ]);
+    echo json_encode(['success' => false, 'message' => 'Invalid request method']);
 }
-
-mysqli_close($conn);
 ?>
