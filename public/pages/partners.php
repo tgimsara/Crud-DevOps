@@ -1,3 +1,5 @@
+<?php
+include("../includes/header.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -54,6 +56,7 @@
             border-radius: 50px;
             border: 1px solid rgba(255, 255, 255, 0.2);
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            margin-top:70px;
         }
         .partner-card {
             background: rgba(255, 255, 255, 0.1);
@@ -202,97 +205,65 @@
                 <div class="col-lg-3 col-md-4 col-sm-6">
                     <div class="partner-card">
                         <div class="partner-image-wrapper">
-                            <svg width="64" height="64" viewBox="0 0 64 64" fill="none" class="partner-image" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="32" cy="32" r="29" fill="rgba(255,255,255,0.18)" stroke="#fff" stroke-width="2"/>
-                                <path d="M20 34c0-6 8-6 12-6s12 0 12 6-3.5 10-12 10-12-4-12-10z" fill="#fff" fill-opacity="0.25"/>
-                                <circle cx="32" cy="24" r="8" fill="#fff" fill-opacity="0.25" stroke="#fff" stroke-width="2"/>
-                            </svg>
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Liam Smith" class="partner-image" width="64" height="64" />
                         </div>
-                        <h3 class="partner-name">User1</h3>
+                        <h3 class="partner-name">Liam Smith</h3>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-6">
                     <div class="partner-card">
                         <div class="partner-image-wrapper">
-                            <svg width="64" height="64" viewBox="0 0 64 64" fill="none" class="partner-image" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="32" cy="32" r="29" fill="rgba(255,255,255,0.18)" stroke="#fff" stroke-width="2"/>
-                                <path d="M20 34c0-6 8-6 12-6s12 0 12 6-3.5 10-12 10-12-4-12-10z" fill="#fff" fill-opacity="0.25"/>
-                                <circle cx="32" cy="24" r="8" fill="#fff" fill-opacity="0.25" stroke="#fff" stroke-width="2"/>
-                            </svg>
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Emma Johnson" class="partner-image" width="64" height="64" />
                         </div>
-                        <h3 class="partner-name">User2</h3>
+                        <h3 class="partner-name">Emma Johnson</h3>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-6">
                     <div class="partner-card">
                         <div class="partner-image-wrapper">
-                            <svg width="64" height="64" viewBox="0 0 64 64" fill="none" class="partner-image" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="32" cy="32" r="29" fill="rgba(255,255,255,0.18)" stroke="#fff" stroke-width="2"/>
-                                <path d="M20 34c0-6 8-6 12-6s12 0 12 6-3.5 10-12 10-12-4-12-10z" fill="#fff" fill-opacity="0.25"/>
-                                <circle cx="32" cy="24" r="8" fill="#fff" fill-opacity="0.25" stroke="#fff" stroke-width="2"/>
-                            </svg>
+                            <img src="https://randomuser.me/api/portraits/men/85.jpg" alt="Noah Williams" class="partner-image" width="64" height="64" />
                         </div>
-                        <h3 class="partner-name">User3</h3>
+                        <h3 class="partner-name">Noah Williams</h3>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-6">
                     <div class="partner-card">
                         <div class="partner-image-wrapper">
-                            <svg width="64" height="64" viewBox="0 0 64 64" fill="none" class="partner-image" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="32" cy="32" r="29" fill="rgba(255,255,255,0.18)" stroke="#fff" stroke-width="2"/>
-                                <path d="M20 34c0-6 8-6 12-6s12 0 12 6-3.5 10-12 10-12-4-12-10z" fill="#fff" fill-opacity="0.25"/>
-                                <circle cx="32" cy="24" r="8" fill="#fff" fill-opacity="0.25" stroke="#fff" stroke-width="2"/>
-                            </svg>
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Olivia Brown" class="partner-image" width="64" height="64" />
                         </div>
-                        <h3 class="partner-name">User4</h3>
+                        <h3 class="partner-name">Olivia Brown</h3>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-6">
                     <div class="partner-card">
                         <div class="partner-image-wrapper">
-                            <svg width="64" height="64" viewBox="0 0 64 64" fill="none" class="partner-image" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="32" cy="32" r="29" fill="rgba(255,255,255,0.18)" stroke="#fff" stroke-width="2"/>
-                                <path d="M20 34c0-6 8-6 12-6s12 0 12 6-3.5 10-12 10-12-4-12-10z" fill="#fff" fill-opacity="0.25"/>
-                                <circle cx="32" cy="24" r="8" fill="#fff" fill-opacity="0.25" stroke="#fff" stroke-width="2"/>
-                            </svg>
+                            <img src="https://randomuser.me/api/portraits/men/23.jpg" alt="William Jones" class="partner-image" width="64" height="64" />
                         </div>
-                        <h3 class="partner-name">User5</h3>
+                        <h3 class="partner-name">William Jones</h3>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-6">
                     <div class="partner-card">
                         <div class="partner-image-wrapper">
-                            <svg width="64" height="64" viewBox="0 0 64 64" fill="none" class="partner-image" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="32" cy="32" r="29" fill="rgba(255,255,255,0.18)" stroke="#fff" stroke-width="2"/>
-                                <path d="M20 34c0-6 8-6 12-6s12 0 12 6-3.5 10-12 10-12-4-12-10z" fill="#fff" fill-opacity="0.25"/>
-                                <circle cx="32" cy="24" r="8" fill="#fff" fill-opacity="0.25" stroke="#fff" stroke-width="2"/>
-                            </svg>
+                            <img src="https://randomuser.me/api/portraits/women/12.jpg" alt="Sophia Garcia" class="partner-image" width="64" height="64" />
                         </div>
-                        <h3 class="partner-name">User6</h3>
+                        <h3 class="partner-name">Sophia Garcia</h3>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-6">
                     <div class="partner-card">
                         <div class="partner-image-wrapper">
-                            <svg width="64" height="64" viewBox="0 0 64 64" fill="none" class="partner-image" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="32" cy="32" r="29" fill="rgba(255,255,255,0.18)" stroke="#fff" stroke-width="2"/>
-                                <path d="M20 34c0-6 8-6 12-6s12 0 12 6-3.5 10-12 10-12-4-12-10z" fill="#fff" fill-opacity="0.25"/>
-                                <circle cx="32" cy="24" r="8" fill="#fff" fill-opacity="0.25" stroke="#fff" stroke-width="2"/>
-                            </svg>
+                            <img src="https://randomuser.me/api/portraits/men/42.jpg" alt="James Martinez" class="partner-image" width="64" height="64" />
                         </div>
-                        <h3 class="partner-name">User7</h3>
+                        <h3 class="partner-name">James Martinez</h3>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-6">
                     <div class="partner-card">
                         <div class="partner-image-wrapper">
-                            <svg width="64" height="64" viewBox="0 0 64 64" fill="none" class="partner-image" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="32" cy="32" r="29" fill="rgba(255,255,255,0.18)" stroke="#fff" stroke-width="2"/>
-                                <path d="M20 34c0-6 8-6 12-6s12 0 12 6-3.5 10-12 10-12-4-12-10z" fill="#fff" fill-opacity="0.25"/>
-                                <circle cx="32" cy="24" r="8" fill="#fff" fill-opacity="0.25" stroke="#fff" stroke-width="2"/>
-                            </svg>
+                            <img src="https://randomuser.me/api/portraits/women/93.jpg" alt="Isabella Lee" class="partner-image" width="64" height="64" />
                         </div>
-                        <h3 class="partner-name">User8</h3>
+                        <h3 class="partner-name">Isabella Lee</h3>
                     </div>
                 </div>
             </div>
@@ -300,109 +271,77 @@
 
         <div class="glass-divider"></div>
 
-<div class="partners-section">
-    <div class="section-header">
-        <h2> International Partners</h2>
-    </div>
-    <div class="row g-4">
-        <div class="col-lg-3 col-md-4 col-sm-6">
-            <div class="partner-card">
-                <div class="partner-image-wrapper">
-                    <svg width="64" height="64" viewBox="0 0 64 64" fill="none" class="partner-image" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="32" cy="32" r="29" fill="rgba(255,255,255,0.18)" stroke="#fff" stroke-width="2"/>
-                        <path d="M20 34c0-6 8-6 12-6s12 0 12 6-3.5 10-12 10-12-4-12-10z" fill="#fff" fill-opacity="0.25"/>
-                        <circle cx="32" cy="24" r="8" fill="#fff" fill-opacity="0.25" stroke="#fff" stroke-width="2"/>
-                    </svg>
+        <div class="partners-section">
+            <div class="section-header">
+                <h2> International Partners</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="partner-card">
+                        <div class="partner-image-wrapper">
+                            <img src="https://randomuser.me/api/portraits/women/25.jpg" alt="Mia Chen" class="partner-image" width="64" height="64" />
+                        </div>
+                        <h3 class="partner-name">Mia Chen</h3>
+                    </div>
                 </div>
-                <h3 class="partner-name">User1</h3>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="partner-card">
+                        <div class="partner-image-wrapper">
+                            <img src="https://randomuser.me/api/portraits/men/56.jpg" alt="Benjamin Kim" class="partner-image" width="64" height="64" />
+                        </div>
+                        <h3 class="partner-name">Benjamin Kim</h3>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="partner-card">
+                        <div class="partner-image-wrapper">
+                            <img src="https://randomuser.me/api/portraits/women/61.jpg" alt="Charlotte Patel" class="partner-image" width="64" height="64" />
+                        </div>
+                        <h3 class="partner-name">Charlotte Patel</h3>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="partner-card">
+                        <div class="partner-image-wrapper">
+                            <img src="https://randomuser.me/api/portraits/men/35.jpg" alt="Henry Müller" class="partner-image" width="64" height="64" />
+                        </div>
+                        <h3 class="partner-name">Henry Müller</h3>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="partner-card">
+                        <div class="partner-image-wrapper">
+                            <img src="https://randomuser.me/api/portraits/women/84.jpg" alt="Amelia Rossi" class="partner-image" width="64" height="64" />
+                        </div>
+                        <h3 class="partner-name">Amelia Rossi</h3>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="partner-card">
+                        <div class="partner-image-wrapper">
+                            <img src="https://randomuser.me/api/portraits/men/17.jpg" alt="Lucas Dubois" class="partner-image" width="64" height="64" />
+                        </div>
+                        <h3 class="partner-name">Lucas Dubois</h3>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="partner-card">
+                        <div class="partner-image-wrapper">
+                            <img src="https://randomuser.me/api/portraits/women/77.jpg" alt="Emily Smith" class="partner-image" width="64" height="64" />
+                        </div>
+                        <h3 class="partner-name">Emily Smith</h3>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="partner-card">
+                        <div class="partner-image-wrapper">
+                            <img src="https://randomuser.me/api/portraits/men/28.jpg" alt="Alexander Ivanov" class="partner-image" width="64" height="64" />
+                        </div>
+                        <h3 class="partner-name">Alexander Ivanov</h3>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="col-lg-3 col-md-4 col-sm-6">
-            <div class="partner-card">
-                <div class="partner-image-wrapper">
-                    <svg width="64" height="64" viewBox="0 0 64 64" fill="none" class="partner-image" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="32" cy="32" r="29" fill="rgba(255,255,255,0.18)" stroke="#fff" stroke-width="2"/>
-                        <path d="M20 34c0-6 8-6 12-6s12 0 12 6-3.5 10-12 10-12-4-12-10z" fill="#fff" fill-opacity="0.25"/>
-                        <circle cx="32" cy="24" r="8" fill="#fff" fill-opacity="0.25" stroke="#fff" stroke-width="2"/>
-                    </svg>
-                </div>
-                <h3 class="partner-name">User2</h3>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6">
-            <div class="partner-card">
-                <div class="partner-image-wrapper">
-                    <svg width="64" height="64" viewBox="0 0 64 64" fill="none" class="partner-image" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="32" cy="32" r="29" fill="rgba(255,255,255,0.18)" stroke="#fff" stroke-width="2"/>
-                        <path d="M20 34c0-6 8-6 12-6s12 0 12 6-3.5 10-12 10-12-4-12-10z" fill="#fff" fill-opacity="0.25"/>
-                        <circle cx="32" cy="24" r="8" fill="#fff" fill-opacity="0.25" stroke="#fff" stroke-width="2"/>
-                    </svg>
-                </div>
-                <h3 class="partner-name">User3</h3>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6">
-            <div class="partner-card">
-                <div class="partner-image-wrapper">
-                    <svg width="64" height="64" viewBox="0 0 64 64" fill="none" class="partner-image" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="32" cy="32" r="29" fill="rgba(255,255,255,0.18)" stroke="#fff" stroke-width="2"/>
-                        <path d="M20 34c0-6 8-6 12-6s12 0 12 6-3.5 10-12 10-12-4-12-10z" fill="#fff" fill-opacity="0.25"/>
-                        <circle cx="32" cy="24" r="8" fill="#fff" fill-opacity="0.25" stroke="#fff" stroke-width="2"/>
-                    </svg>
-                </div>
-                <h3 class="partner-name">User4</h3>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6">
-            <div class="partner-card">
-                <div class="partner-image-wrapper">
-                    <svg width="64" height="64" viewBox="0 0 64 64" fill="none" class="partner-image" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="32" cy="32" r="29" fill="rgba(255,255,255,0.18)" stroke="#fff" stroke-width="2"/>
-                        <path d="M20 34c0-6 8-6 12-6s12 0 12 6-3.5 10-12 10-12-4-12-10z" fill="#fff" fill-opacity="0.25"/>
-                        <circle cx="32" cy="24" r="8" fill="#fff" fill-opacity="0.25" stroke="#fff" stroke-width="2"/>
-                    </svg>
-                </div>
-                <h3 class="partner-name">User5</h3>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6">
-            <div class="partner-card">
-                <div class="partner-image-wrapper">
-                    <svg width="64" height="64" viewBox="0 0 64 64" fill="none" class="partner-image" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="32" cy="32" r="29" fill="rgba(255,255,255,0.18)" stroke="#fff" stroke-width="2"/>
-                        <path d="M20 34c0-6 8-6 12-6s12 0 12 6-3.5 10-12 10-12-4-12-10z" fill="#fff" fill-opacity="0.25"/>
-                        <circle cx="32" cy="24" r="8" fill="#fff" fill-opacity="0.25" stroke="#fff" stroke-width="2"/>
-                    </svg>
-                </div>
-                <h3 class="partner-name">User6</h3>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6">
-            <div class="partner-card">
-                <div class="partner-image-wrapper">
-                    <svg width="64" height="64" viewBox="0 0 64 64" fill="none" class="partner-image" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="32" cy="32" r="29" fill="rgba(255,255,255,0.18)" stroke="#fff" stroke-width="2"/>
-                        <path d="M20 34c0-6 8-6 12-6s12 0 12 6-3.5 10-12 10-12-4-12-10z" fill="#fff" fill-opacity="0.25"/>
-                        <circle cx="32" cy="24" r="8" fill="#fff" fill-opacity="0.25" stroke="#fff" stroke-width="2"/>
-                    </svg>
-                </div>
-                <h3 class="partner-name">User7</h3>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6">
-            <div class="partner-card">
-                <div class="partner-image-wrapper">
-                    <svg width="64" height="64" viewBox="0 0 64 64" fill="none" class="partner-image" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="32" cy="32" r="29" fill="rgba(255,255,255,0.18)" stroke="#fff" stroke-width="2"/>
-                        <path d="M20 34c0-6 8-6 12-6s12 0 12 6-3.5 10-12 10-12-4-12-10z" fill="#fff" fill-opacity="0.25"/>
-                        <circle cx="32" cy="24" r="8" fill="#fff" fill-opacity="0.25" stroke="#fff" stroke-width="2"/>
-                    </svg>
-                </div>
-                <h3 class="partner-name">User8</h3>
-            </div>
-        </div>
-    </div>
-</div>
                 
             </div>
         </div>
