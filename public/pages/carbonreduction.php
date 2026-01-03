@@ -678,7 +678,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     
     <script>
-        // Reveal on Scroll Animation
+        
         function revealOnScroll() {
             const elements = document.querySelectorAll('.liquid-glass-card, .stat-item');
             
@@ -695,7 +695,7 @@
         window.addEventListener('scroll', revealOnScroll);
         window.addEventListener('load', revealOnScroll);
 
-        // Mouse Glow Effect
+        
         const mouseGlow = document.getElementById('mouseGlow');
         
         document.addEventListener('mousemove', (e) => {
@@ -703,7 +703,7 @@
             mouseGlow.style.top = e.clientY + 'px';
         });
 
-        // Counter Animation for Stats
+        
         function animateCounters() {
             const counters = document.querySelectorAll('.stat-number');
             
@@ -724,7 +724,7 @@
                     }
                 };
                 
-                // Start animation when stat item is visible
+                
                 const observer = new IntersectionObserver((entries) => {
                     entries.forEach(entry => {
                         if (entry.isIntersecting) {
@@ -740,7 +740,7 @@
 
         animateCounters();
 
-        // Card 3D Tilt Effect
+        
         const cards = document.querySelectorAll('.liquid-glass-card');
         
         cards.forEach(card => {
@@ -761,7 +761,7 @@
             });
         });
 
-        // Parallax Effect on Orbs
+        
         document.addEventListener('mousemove', (e) => {
             const orbs = document.querySelectorAll('.orb');
             const mouseX = e.clientX / window.innerWidth;

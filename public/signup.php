@@ -189,7 +189,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
      <script src="js/login.js"></script>
      <script>
-        // Switch between login and signup forms
+        
 function switchForm(formType) {
     const loginForm = document.getElementById('loginForm');
     const signupForm = document.getElementById('signupForm');
@@ -203,7 +203,7 @@ function switchForm(formType) {
     }
 }
 
-// Login Form Submit
+
 document.getElementById('loginForm').addEventListener('submit', function(e) {
     e.preventDefault();
     
@@ -228,7 +228,7 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
     });
 });
 
-// Signup Form Submit
+
 document.getElementById('signupForm').addEventListener('submit', function(e) {
     e.preventDefault();
     
@@ -236,7 +236,7 @@ document.getElementById('signupForm').addEventListener('submit', function(e) {
     const email = document.getElementById('signupEmail').value;
     const password = document.getElementById('signupPassword').value;
     
-    // Basic validation
+   
     if (name.trim() === '' || email.trim() === '' || password.trim() === '') {
         alert('Please fill all fields');
         return;
@@ -252,9 +252,9 @@ document.getElementById('signupForm').addEventListener('submit', function(e) {
     .then(data => {
         alert(data.message);
         if (data.success) {
-            // Clear form
+            
             document.getElementById('signupForm').reset();
-            // Switch to login form
+            
             switchForm('login');
         }
     })
@@ -264,7 +264,7 @@ document.getElementById('signupForm').addEventListener('submit', function(e) {
     });
 });
 
-// Toggle password visibility
+
 function togglePassword(fieldId) {
     const field = document.getElementById(fieldId);
     const icon = field.parentElement.querySelector('.password-toggle i');
@@ -280,7 +280,7 @@ function togglePassword(fieldId) {
     }
 }
 
-// Google login placeholder
+
 function googleLogin() {
     alert('Google login feature coming soon!');
 }

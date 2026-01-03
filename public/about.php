@@ -709,7 +709,252 @@
 
 
 
-    
+
+
+    .fade-in-left {
+      opacity: 0;
+      transform: translateX(-60px);
+      transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .fade-in-left.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .fade-in-right {
+      opacity: 0;
+      transform: translateX(60px);
+      transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .fade-in-right.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .stagger-1 { transition-delay: 0.1s; }
+    .stagger-2 { transition-delay: 0.2s; }
+    .stagger-3 { transition-delay: 0.3s; }
+    .stagger-4 { transition-delay: 0.4s; }
+    .stagger-5 { transition-delay: 0.5s; }
+
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: rgba(0, 0, 0, 0.3);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(180deg, #9333ea, #3b82f6);
+      border-radius: 10px;
+    }
+
+    @media (max-width: 768px) {
+      section {
+        padding: 60px 15px;
+      }
+
+      .glass-card {
+        padding: 30px 25px;
+        border-radius: 24px;
+      }
+
+      .banner .glass-card {
+        padding: 40px 30px;
+      }
+
+      .team-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .member {
+        padding: 30px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="floating-orbs">
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+  <div class="orb orb-4"></div>
+</div>
+
+<section class="banner">
+  <div class="container">
+    <div class="glass-card">
+      <div class="shimmer"></div>
+      <div class="banner-badge">CRUD DevOps Team</div>
+      <h1>About Us</h1>
+      <p>We are a university-driven team building a collaborative platform to support sustainability initiatives, partnerships, and measurable environmental impact.</p>
+    </div>
+  </div>
+</section>
+
+<section class="first">
+  <div class="container">
+    <div class="glass-card fade-in">
+      <div class="shimmer"></div>
+      <p>Many sustainability initiatives struggle due to poor coordination and limited impact visibility. This platform was created during a university hackathon to simplify sustainability management and collaboration.</p>
+      <p>Developed by five undergraduates from Uva Wellassa University of Sri Lanka, the project focuses on turning sustainability ideas into structured, measurable action.</p>
+      <a class="cta" href="#">Explore our platform</a>
+    </div>
+  </div>
+</section>
+
+<section class="second flex-section">
+  <div class="container">
+    <div class="left-img fade-in-left">
+      <img src="https://i.pinimg.com/736x/1c/11/39/1c113972097ffc23d16b5dbc2b2701c4.jpg" alt="platform">
+    </div>
+    <div class="right-content fade-in-right">
+      <div class="glass-card">
+        <div class="shimmer"></div>
+        <h2>Designed for Sustainability Management</h2>
+        <p>The platform enables users to plan initiatives, assign tasks, manage resources, and collaborate with partners while tracking social and environmental impact.</p>
+        <a class="cta" href="#">Learn more</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="third flex-section reverse">
+  <div class="container">
+    <div class="left-content fade-in-left">
+      <div class="glass-card">
+        <div class="shimmer"></div>
+        <h2>Driving Climate Action Through Collaboration</h2>
+        <p>By supporting partnerships and responsible consumption, the platform helps teams achieve outcomes aligned with climate action and sustainable development.</p>
+        <p>Transparency and collaboration empower long-term environmental and social change.</p>
+        <a class="cta" href="#">Contact us</a>
+      </div>
+    </div>
+    <div class="right-img fade-in-right">
+      <img src="https://i.pinimg.com/736x/b4/f6/f4/b4f6f43b8ea565f8809e513a841e9a96.jpg" alt="impact">
+    </div>
+  </div>
+</section>
+
+<section class="four">
+  <div class="container">
+    <div class="team-grid">
+      <div class="member fade-in stagger-1">
+        <div class="member-icon">👨‍💻</div>
+        <h3>Team Member 1</h3>
+        <p>CRUD DevOps – Platform Development</p>
+      </div>
+      <div class="member fade-in stagger-2">
+        <div class="member-icon">🤝</div>
+        <h3>Team Member 2</h3>
+        <p>CRUD DevOps – Collaboration & Planning</p>
+      </div>
+      <div class="member fade-in stagger-3">
+        <div class="member-icon">📊</div>
+        <h3>Team Member 3</h3>
+        <p>CRUD DevOps – Impact Tracking</p>
+      </div>
+      <div class="member fade-in stagger-4">
+        <div class="member-icon">🎨</div>
+        <h3>Team Member 4</h3>
+        <p>CRUD DevOps – UI & Experience</p>
+      </div>
+      <div class="member fade-in stagger-5">
+        <div class="member-icon">⚙️</div>
+        <h3>Team Member 5</h3>
+        <p>CRUD DevOps – System Design</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="six">
+  <div class="container">
+    <div class="glass-card fade-in">
+      <div class="shimmer"></div>
+      <h4>Explore the Platform and Create Impact</h4>
+      <p>Join us in building collaborative, transparent, and impactful sustainability initiatives.</p>
+      <img src="https://i.pinimg.com/1200x/f7/b1/54/f7b1544efe7b1141b40e4b4efe44f3a0.jpg" alt="get started">
+      <p><i>Every action contributes to a healthier and more sustainable future.</i></p>
+      <a class="cta" href="#">Explore the platform</a>
+    </div>
+  </div>
+</section>
+
+
+
+<div class="scroll-indicator" id="scrollTop">
+  <svg viewBox="0 0 24 24"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/></svg>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const fadeElements = document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right');
+  
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, observerOptions);
+
+  fadeElements.forEach(function(el) {
+    observer.observe(el);
+  });
+
+  const scrollIndicator = document.getElementById('scrollTop');
+  
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 500) {
+      scrollIndicator.classList.add('visible');
+    } else {
+      scrollIndicator.classList.remove('visible');
+    }
+  });
+
+  scrollIndicator.addEventListener('click', function() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+
+  document.querySelectorAll('.glass-card').forEach(function(card) {
+    card.addEventListener('mousemove', function(e) {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+      const rotateX = (y - centerY) / 20;
+      const rotateY = (centerX - x) / 20;
+      
+      card.style.transform = 'perspective(1000px) rotateX(' + rotateX + 'deg) rotateY(' + rotateY + 'deg) translateY(-10px)';
+    });
+
+    card.addEventListener('mouseleave', function() {
+      card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
+    });
+  });
+});
+</script>
+
+</body>
+</html>
+
 
 
 <?php
