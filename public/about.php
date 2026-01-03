@@ -845,29 +845,29 @@
   <div class="container">
     <div class="team-grid">
       <div class="member fade-in stagger-1">
-        <div class="member-icon">👨‍💻</div>
-        <h3>Team Member 1</h3>
-        <p>CRUD DevOps – Platform Development</p>
+        <img src="images/tg.jpeg" alt="image">
+        <h3>Tharusha Gimsara</h3>
+        <p>CRUD DevOps – Team Leader</p>
       </div>
       <div class="member fade-in stagger-2">
-        <div class="member-icon">🤝</div>
-        <h3>Team Member 2</h3>
-        <p>CRUD DevOps – Collaboration & Planning</p>
+        <img src = "images/tb.jpeg"  alt = "image>"
+        <h3>Tharusha Balagalla</h3>
+        <p>CRUD DevOps </p>
       </div>
       <div class="member fade-in stagger-3">
-        <div class="member-icon">📊</div>
-        <h3>Team Member 3</h3>
-        <p>CRUD DevOps – Impact Tracking</p>
+       <img src = "images/vishwa.jpeg"  alt = "image>"
+        <h3>Vishwa Lochana</h3>
+        <p>CRUD DevOps </p>
       </div>
       <div class="member fade-in stagger-4">
-        <div class="member-icon">🎨</div>
-        <h3>Team Member 4</h3>
-        <p>CRUD DevOps – UI & Experience</p>
+        <img src = "images/pahan.jpeg"  alt = "image>"
+        <h3>Pahan Perera</h3>
+        <p>CRUD DevOps </p>
       </div>
       <div class="member fade-in stagger-5">
-        <div class="member-icon">⚙️</div>
-        <h3>Team Member 5</h3>
-        <p>CRUD DevOps – System Design</p>
+        <img src = "images/lak.jpeg"  alt = "image>"
+        <h3>Lakshan Muhandiram</h3>
+        <p>CRUD DevOps </p>
       </div>
     </div>
   </div>
