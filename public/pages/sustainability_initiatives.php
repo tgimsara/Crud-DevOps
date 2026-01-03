@@ -36,7 +36,7 @@
                             <span>Uva Wellassa University</span>
                         </div>
                         <div class="info-item">
-                            <span>Jan – Mar 2026</span>
+                            <span>Jan to Mar 2026</span>
                         </div>
                     </div>
 
@@ -188,7 +188,7 @@
                     </div>
                 </section>
 
-                <!-- Tasks Section -->
+                
                 <section class="detail-section glass-card">
                     <h3>Tasks</h3>
                     <div class="task-list">
@@ -211,7 +211,7 @@
                     </div>
                 </section>
 
-                <!-- Resources Section -->
+                
                 <section class="detail-section glass-card">
                     <h3>Resources</h3>
                     <div class="resource-grid">
@@ -230,7 +230,7 @@
                     </div>
                 </section>
 
-                <!-- Impact Dashboard -->
+                
                 <section class="detail-section glass-card">
                     <h3>Impact Dashboard</h3>
                     <div class="impact-grid">
@@ -253,7 +253,7 @@
                     </div>
                 </section>
 
-                <!-- Partners Section -->
+                
                 <section class="detail-section glass-card">
                     <h3>Partners</h3>
                     <div class="partners-grid">
@@ -264,7 +264,7 @@
                     </div>
                 </section>
 
-                <!-- Comments Section -->
+                
                 <section class="detail-section glass-card">
                     <h3>Comments & Updates</h3>
                     <div class="comments-section">
