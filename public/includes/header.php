@@ -6,7 +6,7 @@
 <title>Glass Navbar with Dropdowns</title>
 
 <style>
-/* ================== GLOBAL RESET ================== */
+
 *{
   margin:0;
   padding:0;
@@ -14,13 +14,11 @@
   font-family:'Poppins',sans-serif;
 }
 
-/* ================== BODY ================== */
 body{
   height:200vh;
   background:linear-gradient(120deg,#0f0f14,#2a2a38);
 }
 
-/* ================== NAVBAR ================== */
 .glass-navbar{
   position:fixed;
   top:24px;
@@ -37,7 +35,7 @@ body{
   z-index:100;
 }
 
-/* ================== NAV LINKS ================== */
+
 .nav-desktop{
   height:100%;
   display:flex;
@@ -54,7 +52,7 @@ body{
   cursor:pointer;
 }
 
-/* ================== DROPDOWN ================== */
+
 .nav-dropdown{
   position:absolute;
   top:calc(100% + 18px);
@@ -87,7 +85,7 @@ body{
   background:rgba(255,255,255,.15);
 }
 
-/* ================== RIGHT ACTIONS ================== */
+
 .nav-actions{
   position:absolute;
   right:36px;
@@ -118,7 +116,7 @@ body{
   object-fit:cover;
 }
 
-/* ================== BURGER ================== */
+
 .nav-burger{
   display:none;
   position:absolute;
@@ -154,7 +152,7 @@ body{
   bottom:20px;
 }
 
-/* ================== MOBILE MENU ================== */
+
 .mobile-panel{
   position:fixed;
   top:0;
@@ -226,9 +224,9 @@ body{
     <li class="nav-item" id="navProject">
       Project
       <div class="nav-dropdown" id="dropdownProject">
-        <a href="#">Overview</a>
-        <a href="#">Timeline</a>
-        <a href="#">Team</a>
+        <a href="">Overview</a>
+        <a href="">Timeline</a>
+        <a href="">Team</a>
         <a href="pages/achievement.php">Achievements</a>
       </div>
     </li>
@@ -236,29 +234,29 @@ body{
     <li class="nav-item" id="navResources">
       Resources
       <div class="nav-dropdown" id="dropdownResources">
-        <a href="#">Docs</a>
-        <a href="#">Downloads</a>
-        <a href="#">Tutorials</a>
-        <a href="#">API</a>
+        <a href="">Docs</a>
+        <a href="">Downloads</a>
+        <a href="">Tutorials</a>
+        <a href="">API</a>
       </div>
     </li>
 
     <li class="nav-item" id="navServices">
       Services
       <div class="nav-dropdown" id="dropdownServices">
-        <a href="#">Consulting</a>
-        <a href="#">Development</a>
-        <a href="#">Support</a>
-        <a href="#">Training</a>
+        <a href="">Consulting</a>
+        <a href="">Development</a>
+        <a href="">Support</a>
+        <a href="">Training</a>
       </div>
     </li>
 
     <li class="nav-item" id="navImpact">
       Impact
       <div class="nav-dropdown" id="dropdownImpact">
-        <a href="#">Cases</a>
-        <a href="#">Stats</a>
-        <a href="#">Awards</a>
+        <a href="">Cases</a>
+        <a href="">Stats</a>
+        <a href="">Awards</a>
       </div>
     </li>
 
@@ -282,33 +280,33 @@ body{
     <li class="mobile-item">
       <div class="mobile-label">Project</div>
       <div class="mobile-submenu">
-        <a href="#">Overview</a>
-        <a href="#">Timeline</a>
-        <a href="#">Team</a>
+        <a href="">Overview</a>
+        <a href="">Timeline</a>
+        <a href="">Team</a>
       </div>
     </li>
 
     <li class="mobile-item">
       <div class="mobile-label">Resources</div>
       <div class="mobile-submenu">
-        <a href="#">Docs</a>
-        <a href="#">Downloads</a>
+        <a href="">Docs</a>
+        <a href="">Downloads</a>
       </div>
     </li>
 
     <li class="mobile-item">
       <div class="mobile-label">Services</div>
       <div class="mobile-submenu">
-        <a href="#">Consulting</a>
-        <a href="#">Support</a>
+        <a href="">Consulting</a>
+        <a href="">Support</a>
       </div>
     </li>
 
     <li class="mobile-item">
       <div class="mobile-label">Impact</div>
       <div class="mobile-submenu">
-        <a href="#">Cases</a>
-        <a href="#">Awards</a>
+        <a href="">Cases</a>
+        <a href="">Awards</a>
       </div>
     </li>
 
