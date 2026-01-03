@@ -425,6 +425,292 @@
     }
 
 
+    @keyframes badgePulse {
+      0%, 100% { box-shadow: 0 0 20px rgba(16, 185, 129, 0.3); }
+      50% { box-shadow: 0 0 40px rgba(16, 185, 129, 0.5); }
+    }
+
+    .first .glass-card {
+      animation: slideInUp 1s ease forwards;
+    }
+
+    @keyframes slideInUp {
+      from {
+        opacity: 0;
+        transform: translateY(60px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .flex-section .container {
+      display: flex;
+      flex-direction: column;
+
+
+      gap: 40px;
+    }
+
+    @media (min-width: 768px) {
+      .flex-section .container {
+        flex-direction: row;
+
+        align-items: center;
+      }
+
+      .flex-section .left-content,
+      .flex-section .right-content,
+
+
+      .flex-section .left-img,
+      .flex-section .right-img {
+        flex: 1;
+      }
+
+      .flex-section.reverse .container {
+        flex-direction: row-reverse;
+      }
+    }
+
+    .left-img, .right-img {
+      position: relative;
+    }
+
+    .left-img::before, .right-img::before {
+      content: '';
+      position: absolute;
+      top: -20px;
+      left: -20px;
+      right: 20px;
+      bottom: 20px;
+      background: linear-gradient(135deg, rgba(147, 51, 234, 0.3), rgba(59, 130, 246, 0.3));
+      border-radius: 24px;
+      z-index: -1;
+      filter: blur(30px);
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+
+    .left-img:hover::before, .right-img:hover::before {
+      opacity: 1;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .member {
+      background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.1) 0%,
+        rgba(255, 255, 255, 0.05) 100%
+      );
+      backdrop-filter: blur(30px);
+      -webkit-backdrop-filter: blur(30px);
+      padding: 40px 30px;
+      border-radius: 28px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      box-shadow: 
+        0 15px 50px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.15);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .member::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #10b981, #3b82f6, #8b5cf6, #ec4899);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .member::after {
+      content: '';
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background: radial-gradient(circle, rgba(147, 51, 234, 0.3) 0%, transparent 70%);
+      top: -50px;
+      right: -50px;
+      border-radius: 50%;
+      transition: all 0.5s ease;
+    }
+
+    .member:hover {
+      transform: translateY(-15px) scale(1.02);
+      box-shadow: 
+        0 30px 80px rgba(0, 0, 0, 0.4),
+        0 0 60px rgba(147, 51, 234, 0.2);
+      border-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .member:hover::before {
+      opacity: 1;
+    }
+
+    .member:hover::after {
+      transform: scale(2);
+      opacity: 0.5;
+    }
+
+    .member-icon {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 25px;
+      background: linear-gradient(135deg, rgba(147, 51, 234, 0.3), rgba(59, 130, 246, 0.3));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      transition: all 0.5s ease;
+    }
+
+    .member:hover .member-icon {
+      transform: scale(1.15) rotate(360deg);
+      box-shadow: 0 10px 40px rgba(147, 51, 234, 0.4);
+    }
+
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .video-wrapper::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.1) 0%,
+        transparent 30%
+      );
+      pointer-events: none;
+      z-index: 1;
+      border-radius: 24px;
+    }
+
+    .video-wrapper video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .six .glass-card {
+      text-align: center;
+    }
+
+    .six img {
+      max-width: 600px;
+      margin: 30px auto;
+      display: block;
+    }
+
+    footer {
+      background: linear-gradient(
+        135deg,
+        rgba(10, 10, 26, 0.95) 0%,
+        rgba(26, 26, 46, 0.95) 100%
+      );
+      backdrop-filter: blur(20px);
+      padding: 50px 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      position: relative;
+      z-index: 1;
+    }
+
+    footer p {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.95rem;
+      text-align: center;
+      margin: 0;
+    }
+
+    footer .footer-brand {
+      font-size: 1.2rem;
+      font-weight: 600;
+      background: linear-gradient(135deg, #10b981, #3b82f6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .scroll-indicator {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 50px;
+      height: 50px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(20px);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      cursor: pointer;
+      z-index: 100;
+      transition: all 0.3s ease;
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .scroll-indicator.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .scroll-indicator:hover {
+      transform: scale(1.1);
+      background: rgba(147, 51, 234, 0.3);
+    }
+
+    .scroll-indicator svg {
+      width: 24px;
+      height: 24px;
+      fill: #fff;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+
+
+    
+
 
 <?php
  include 'includes/footer.php';
