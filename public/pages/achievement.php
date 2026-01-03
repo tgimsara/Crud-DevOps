@@ -68,6 +68,7 @@ include("../includes/header.php"); ?>
             text-shadow: 3px 3px 20px rgba(0,0,0,0.4);
             margin-bottom: 15px;
             letter-spacing: 2px;
+            margin-top:70px;
         }
 
         .page-header .subtitle {
