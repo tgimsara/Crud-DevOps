@@ -2,13 +2,13 @@
 session_start();
 require_once '../config.php';
 
-// Check if user is logged in
+
 if (!isset($_SESSION['user_id'])) {
     header('Location: login.php');
     exit();
 }
 
-// Fetch user data from database
+
 $user_id = $_SESSION['user_id'];
 $query = "SELECT * FROM users WHERE id = '$user_id'";
 $result = mysqli_query($conn, $query);
@@ -20,7 +20,7 @@ if (mysqli_num_rows($result) == 1) {
     exit();
 }
 
-// Format the member since date
+
 $member_since = date('M Y', strtotime($user['created_at']));
 ?>
 
