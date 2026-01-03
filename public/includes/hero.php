@@ -188,6 +188,7 @@
         .hero-image-container {
             position: relative;
             z-index: 10;
+            
         }
 
         .hero-image-wrapper {
@@ -197,7 +198,7 @@
         }
 
         .hero-image {
-            width: 100%;
+            width: 60%;
             height: auto;
             border-radius: 30px;
             position: relative;
@@ -321,11 +322,10 @@
             <div class="row align-items-center">
                 
                 <div class="col-lg-6 hero-content">
-                    <h1 class="hero-title">Download design assets for free!</h1>
-                    <p class="hero-subtitle">Your one stop platform for anything, and everything design</p>
+                    <h1 class="hero-title">Turn Sustainability Goals Into Action!</h1>
+                    <p class="hero-subtitle">Manage projects, resources, and impact in one simple platform</p>
                     <div class="d-flex flex-wrap">
-                        <button class="glass-btn btn-primary-glass">Get Started</button>
-                        <button class="glass-btn btn-secondary-glass">Watch Video</button>
+                        <button class="glass-btn btn-secondary-glass">Learn More</button>
                     </div>
                 </div>
 
@@ -335,13 +335,7 @@
                         <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=700&fit=crop" alt="Professional Designer" class="hero-image">
                         
                         
-                        <div class="testimonial-card">
-                            <div class="testimonial-avatar">SA</div>
-                            <div class="testimonial-content">
-                                <h6>Seyi Ajibona</h6>
-                                <p>The resources on this platform are lit 🔥</p>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
