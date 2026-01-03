@@ -829,177 +829,189 @@ include("../includes/header.php"); ?>
             <h2 class="section-title"><i class="fas fa-images"></i>Featured Completed Projects</h2>
             <div class="row g-4">
                 <div class="col-lg-4 col-md-6">
-                    <div class="glass-card project-card">
-                        <div class="image-wrapper">
-                            <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600" alt="Tree Plantation">
-                            <div class="overlay">
-                                <div class="overlay-text">View Project Details</div>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <h5>Urban Forest Initiative</h5>
-                            <p>Planted 10,000 trees across 5 urban areas, creating green lungs for the community.</p>
-                            <div class="project-stats">
-                                <div class="project-stat-item">
-                                    <div class="value">10K</div>
-                                    <div class="label">Trees</div>
-                                </div>
-                                <div class="project-stat-item">
-                                    <div class="value">500</div>
-                                    <div class="label">Volunteers</div>
-                                </div>
-                                <div class="project-stat-item">
-                                    <div class="value">5</div>
-                                    <div class="label">Locations</div>
+                    <a href="https://en.wikipedia.org/wiki/Urban_forestry" target="_blank" style="text-decoration:none; color:inherit;">
+                        <div class="glass-card project-card">
+                            <div class="image-wrapper">
+                                <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600" alt="Tree Plantation">
+                                <div class="overlay">
+                                    <div class="overlay-text">View Project Details</div>
                                 </div>
                             </div>
+                            <div class="project-info">
+                                <h5>Urban Forest Initiative</h5>
+                                <p>Planted 10,000 trees across 5 urban areas, creating green lungs for the community.</p>
+                                <div class="project-stats">
+                                    <div class="project-stat-item">
+                                        <div class="value">10K</div>
+                                        <div class="label">Trees</div>
+                                    </div>
+                                    <div class="project-stat-item">
+                                        <div class="value">500</div>
+                                        <div class="label">Volunteers</div>
+                                    </div>
+                                    <div class="project-stat-item">
+                                        <div class="value">5</div>
+                                        <div class="label">Locations</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
 
                 <div class="col-lg-4 col-md-6">
-                    <div class="glass-card project-card">
-                        <div class="image-wrapper">
-                            <img src="https://images.unsplash.com/photo-1618477461853-cf6ed80faba5?w=600" alt="Beach Cleanup">
-                            <div class="overlay">
-                                <div class="overlay-text">View Project Details</div>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <h5>Coastal Conservation Drive</h5>
-                            <p>Massive beach cleanup removing 5 tons of plastic waste and marine debris.</p>
-                            <div class="project-stats">
-                                <div class="project-stat-item">
-                                    <div class="value">5T</div>
-                                    <div class="label">Waste</div>
-                                </div>
-                                <div class="project-stat-item">
-                                    <div class="value">800</div>
-                                    <div class="label">Volunteers</div>
-                                </div>
-                                <div class="project-stat-item">
-                                    <div class="value">12</div>
-                                    <div class="label">Beaches</div>
+                    <a href="https://en.wikipedia.org/wiki/Coastal_management" target="_blank" style="text-decoration:none; color:inherit;">
+                        <div class="glass-card project-card">
+                            <div class="image-wrapper">
+                                <img src="https://images.unsplash.com/photo-1618477461853-cf6ed80faba5?w=600" alt="Beach Cleanup">
+                                <div class="overlay">
+                                    <div class="overlay-text">View Project Details</div>
                                 </div>
                             </div>
+                            <div class="project-info">
+                                <h5>Coastal Conservation Drive</h5>
+                                <p>Massive beach cleanup removing 5 tons of plastic waste and marine debris.</p>
+                                <div class="project-stats">
+                                    <div class="project-stat-item">
+                                        <div class="value">5T</div>
+                                        <div class="label">Waste</div>
+                                    </div>
+                                    <div class="project-stat-item">
+                                        <div class="value">800</div>
+                                        <div class="label">Volunteers</div>
+                                    </div>
+                                    <div class="project-stat-item">
+                                        <div class="value">12</div>
+                                        <div class="label">Beaches</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
 
                 <div class="col-lg-4 col-md-6">
-                    <div class="glass-card project-card">
-                        <div class="image-wrapper">
-                            <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600" alt="Solar Energy">
-                            <div class="overlay">
-                                <div class="overlay-text">View Project Details</div>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <h5>Solar Schools Program</h5>
-                            <p>Installed solar panels in 50 schools, powering education sustainably.</p>
-                            <div class="project-stats">
-                                <div class="project-stat-item">
-                                    <div class="value">50</div>
-                                    <div class="label">Schools</div>
-                                </div>
-                                <div class="project-stat-item">
-                                    <div class="value">5K</div>
-                                    <div class="label">Students</div>
-                                </div>
-                                <div class="project-stat-item">
-                                    <div class="value">30T</div>
-                                    <div class="label">CO2 Saved</div>
+                    <a href="https://en.wikipedia.org/wiki/Solar_power_in_schools" target="_blank" style="text-decoration:none; color:inherit;">
+                        <div class="glass-card project-card">
+                            <div class="image-wrapper">
+                                <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600" alt="Solar Energy">
+                                <div class="overlay">
+                                    <div class="overlay-text">View Project Details</div>
                                 </div>
                             </div>
+                            <div class="project-info">
+                                <h5>Solar Schools Program</h5>
+                                <p>Installed solar panels in 50 schools, powering education sustainably.</p>
+                                <div class="project-stats">
+                                    <div class="project-stat-item">
+                                        <div class="value">50</div>
+                                        <div class="label">Schools</div>
+                                    </div>
+                                    <div class="project-stat-item">
+                                        <div class="value">5K</div>
+                                        <div class="label">Students</div>
+                                    </div>
+                                    <div class="project-stat-item">
+                                        <div class="value">30T</div>
+                                        <div class="label">CO2 Saved</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
 
                 <div class="col-lg-4 col-md-6">
-                    <div class="glass-card project-card">
-                        <div class="image-wrapper">
-                            <img src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=600" alt="Water Conservation">
-                            <div class="overlay">
-                                <div class="overlay-text">View Project Details</div>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <h5>Clean Water Initiative</h5>
-                            <p>Provided clean water access to 20 villages through sustainable filtration systems.</p>
-                            <div class="project-stats">
-                                <div class="project-stat-item">
-                                    <div class="value">20</div>
-                                    <div class="label">Villages</div>
-                                </div>
-                                <div class="project-stat-item">
-                                    <div class="value">8K</div>
-                                    <div class="label">People</div>
-                                </div>
-                                <div class="project-stat-item">
-                                    <div class="value">15</div>
-                                    <div class="label">Systems</div>
+                    <a href="https://en.wikipedia.org/wiki/Water_purification" target="_blank" style="text-decoration:none; color:inherit;">
+                        <div class="glass-card project-card">
+                            <div class="image-wrapper">
+                                <img src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=600" alt="Water Conservation">
+                                <div class="overlay">
+                                    <div class="overlay-text">View Project Details</div>
                                 </div>
                             </div>
+                            <div class="project-info">
+                                <h5>Clean Water Initiative</h5>
+                                <p>Provided clean water access to 20 villages through sustainable filtration systems.</p>
+                                <div class="project-stats">
+                                    <div class="project-stat-item">
+                                        <div class="value">20</div>
+                                        <div class="label">Villages</div>
+                                    </div>
+                                    <div class="project-stat-item">
+                                        <div class="value">8K</div>
+                                        <div class="label">People</div>
+                                    </div>
+                                    <div class="project-stat-item">
+                                        <div class="value">15</div>
+                                        <div class="label">Systems</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
 
                 <div class="col-lg-4 col-md-6">
-                    <div class="glass-card project-card">
-                        <div class="image-wrapper">
-                            <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=600" alt="Education">
-                            <div class="overlay">
-                                <div class="overlay-text">View Project Details</div>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <h5>Eco-Education Program</h5>
-                            <p>Trained 2,000 students and teachers in environmental science and sustainability.</p>
-                            <div class="project-stats">
-                                <div class="project-stat-item">
-                                    <div class="value">2K</div>
-                                    <div class="label">Trained</div>
-                                </div>
-                                <div class="project-stat-item">
-                                    <div class="value">35</div>
-                                    <div class="label">Schools</div>
-                                </div>
-                                <div class="project-stat-item">
-                                    <div class="value">100</div>
-                                    <div class="label">Workshops</div>
+                    <a href="https://en.wikipedia.org/wiki/Environmental_education" target="_blank" style="text-decoration:none; color:inherit;">
+                        <div class="glass-card project-card">
+                            <div class="image-wrapper">
+                                <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=600" alt="Education">
+                                <div class="overlay">
+                                    <div class="overlay-text">View Project Details</div>
                                 </div>
                             </div>
+                            <div class="project-info">
+                                <h5>Eco-Education Program</h5>
+                                <p>Trained 2,000 students and teachers in environmental science and sustainability.</p>
+                                <div class="project-stats">
+                                    <div class="project-stat-item">
+                                        <div class="value">2K</div>
+                                        <div class="label">Trained</div>
+                                    </div>
+                                    <div class="project-stat-item">
+                                        <div class="value">35</div>
+                                        <div class="label">Schools</div>
+                                    </div>
+                                    <div class="project-stat-item">
+                                        <div class="value">100</div>
+                                        <div class="label">Workshops</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
 
                 <div class="col-lg-4 col-md-6">
-                    <div class="glass-card project-card">
-                        <div class="image-wrapper">
-                            <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?w=600" alt="Recycling">
-                            <div class="overlay">
-                                <div class="overlay-text">View Project Details</div>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <h5>Zero Waste Communities</h5>
-                            <p>Implemented comprehensive recycling programs in 10 communities.</p>
-                            <div class="project-stats">
-                                <div class="project-stat-item">
-                                    <div class="value">10</div>
-                                    <div class="label">Communities</div>
-                                </div>
-                                <div class="project-stat-item">
-                                    <div class="value">15T</div>
-                                    <div class="label">Recycled</div>
-                                </div>
-                                <div class="project-stat-item">
-                                    <div class="value">85%</div>
-                                    <div class="label">Reduction</div>
+                    <a href="https://en.wikipedia.org/wiki/Zero_waste" target="_blank" style="text-decoration:none; color:inherit;">
+                        <div class="glass-card project-card">
+                            <div class="image-wrapper">
+                                <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?w=600" alt="Recycling">
+                                <div class="overlay">
+                                    <div class="overlay-text">View Project Details</div>
                                 </div>
                             </div>
+                            <div class="project-info">
+                                <h5>Zero Waste Communities</h5>
+                                <p>Implemented comprehensive recycling programs in 10 communities.</p>
+                                <div class="project-stats">
+                                    <div class="project-stat-item">
+                                        <div class="value">10</div>
+                                        <div class="label">Communities</div>
+                                    </div>
+                                    <div class="project-stat-item">
+                                        <div class="value">15T</div>
+                                        <div class="label">Recycled</div>
+                                    </div>
+                                    <div class="project-stat-item">
+                                        <div class="value">85%</div>
+                                        <div class="label">Reduction</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
