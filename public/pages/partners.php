@@ -412,9 +412,9 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // Add smooth scroll behavior
+        
         document.addEventListener('DOMContentLoaded', function() {
-            // Animate cards on scroll
+           
             const observerOptions = {
                 threshold: 0.1,
                 rootMargin: '0px 0px -50px 0px'
