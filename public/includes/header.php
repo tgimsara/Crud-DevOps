@@ -228,6 +228,9 @@ body{
     <li class="nav-item" id="navProject">
       Project
       <div class="nav-dropdown" id="dropdownProject">
+        <a href="">Overview</a>
+        <a href="">Timeline</a>
+        <a href="">Team</a>
         <a href="pages/achievement.php">Achievements</a>
       </div>
     </li>
@@ -235,7 +238,10 @@ body{
     <li class="nav-item" id="navResources">
       Resources
       <div class="nav-dropdown" id="dropdownResources">
-        <a href="https://en.wikipedia.org/wiki/Sustainable_Development_Goals">Docs</a>
+        <a href="">Docs</a>
+        <a href="">Downloads</a>
+        <a href="">Tutorials</a>
+        <a href="">API</a>
       </div>
     </li>
 
@@ -263,7 +269,7 @@ body{
 
   <div class="nav-actions">
     <?php if ($isLoggedIn): ?>
-      <a href="../logout.php" class="logout-btn">Logout</a>
+      <a href="logout.php" class="logout-btn">Logout</a>
       <div class="profile-img">
         <a href="user.php">
           <img src="images/profile-placeholder.png" alt="Profile">
