@@ -5,7 +5,7 @@
 <footer class="simple-footer">
   <div class="simple-footer-content">
     <div class="footer-copyright">
-      <p>&copy; <?php echo date("Y"); ?> Your Website. All rights reserved.</p>
+      <p>&copy; <?php echo date("Y"); ?> All rights reserved.</p>
     </div>
     
     <div class="footer-region">
