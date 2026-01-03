@@ -1,3 +1,7 @@
+<?php
+session_start();
+$isLoggedIn = isset($_SESSION['user_id']);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -264,12 +268,16 @@ body{
 
 
   <div class="nav-actions">
-    <a href="../logout.php" class="logout-btn">Logout</a>
-    <div class="profile-img">
-      <a href="user.php">
-        <img src="images/profile-placeholder.png" alt="Profile">
-      </a>
-    </div>
+    <?php if ($isLoggedIn): ?>
+      <a href="../logout.php" class="logout-btn">Logout</a>
+      <div class="profile-img">
+        <a href="user.php">
+          <img src="images/profile-placeholder.png" alt="Profile">
+        </a>
+      </div>
+    <?php else: ?>
+      <a href="login.php" class="logout-btn">Login</a>
+    <?php endif; ?>
   </div>
 </header>
 
