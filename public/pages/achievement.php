@@ -1345,7 +1345,8 @@ include("../includes/header.php"); ?>
             document.body.style.setProperty('--scroll-progress', scrolled + '%');
         });
     </script>
-</body>
-</html>
-<?php
+    <?php
 include("../includes/footer.php"); ?>
+</body>
+
+</html>
