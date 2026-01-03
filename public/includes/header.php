@@ -106,9 +106,7 @@
 
 <script src="js/main.js"></script>
 <script>
-    // Add this to the end of your existing JavaScript
-
-// Mobile dropdown toggle
+ 
 const mobileNavItems = document.querySelectorAll(".mobile-nav-item");
 
 mobileNavItems.forEach(item => {

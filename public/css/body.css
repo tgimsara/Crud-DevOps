@@ -1,0 +1,136 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Arial, sans-serif;
+  background:
+    linear-gradient(rgba(15,15,25,0.72), rgba(15,15,25,0.72)),
+    url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: rgba(255,255,255,0.92);
+}
+
+.home-wrapper {
+  max-width: 1250px;
+  margin: 160px auto;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 90px;
+}
+
+.section-row {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+
+.text-glass,
+.image-glass {
+  border-radius: 30px;
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(34px) saturate(180%);
+  -webkit-backdrop-filter: blur(34px) saturate(180%);
+  box-shadow:
+    0 40px 80px rgba(0,0,0,0.6),
+    inset 0 1px 1px rgba(255,255,255,0.4);
+}
+
+.text-glass {
+  flex: 1;
+  padding: 44px;
+  opacity: 0;
+  transform: translateY(26px);
+  transition: all 1.8s ease;
+}
+
+.text-glass.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.text-glass h2 {
+  font-size: 30px;
+  margin-bottom: 18px;
+}
+
+.text-glass p {
+  font-size: 17.6px;
+  line-height: 1.9;
+  color: rgba(255,255,255,0.86);
+}
+
+.image-glass {
+  flex: 1;
+  overflow: hidden;
+}
+
+.image-glass img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 30px;
+  opacity: 0;
+  transform: translateX(140px);
+  transition: all 2.2s cubic-bezier(0.22,0.61,0.36,1);
+}
+
+.image-glass.left img {
+  transform: translateX(-140px);
+}
+
+.image-glass img.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@media (max-width: 900px) {
+  .section-row {
+    flex-direction: column;
+  }
+}
+.logo-carousel-wrapper {
+  width: 100%;
+  overflow: hidden;
+  padding: 40px 0;
+  background: rgba(23, 25, 41, 0.85);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+}
+
+.logo-carousel {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+  animation: scrollLogos 25s linear infinite;
+}
+
+.logo-carousel img {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+  filter: brightness(0) invert(1); /* makes logos white on dark background */
+  transition: transform 0.3s ease;
+}
+
+.logo-carousel img:hover {
+  transform: scale(1.2);
+}
+
+@keyframes scrollLogos {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .logo-carousel {
+    gap: 40px;
+  }
+  .logo-carousel img {
+    height: 45px;
+  }
+}
