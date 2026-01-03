@@ -1,5 +1,3 @@
-<?php
-include("../includes/header.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1346,5 +1344,3 @@ include("../includes/header.php"); ?>
     </script>
 </body>
 </html>
-<?php
-include("../includes/footer.php"); ?>
