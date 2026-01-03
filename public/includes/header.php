@@ -250,11 +250,10 @@ body{
     </li>
 
     <li class="nav-item" id="navImpact">
-      Impact
+     Goals
       <div class="nav-dropdown" id="dropdownImpact">
-        <a href="">Cases</a>
-        <a href="">Stats</a>
-        <a href="">Awards</a>
+        <a href="pages/carbonreduction.php">Reduction of CO2</a>
+        <a href="pages/planttrees.php">Planing Trees</a>
       </div>
     </li>
 
@@ -282,9 +281,7 @@ body{
     <li class="mobile-item">
       <div class="mobile-label">Project</div>
       <div class="mobile-submenu">
-        <a href="">Overview</a>
-        <a href="">Timeline</a>
-        <a href="">Team</a>
+        <a href="pages/achievement.php">Achievements</a>
       </div>
     </li>
 
@@ -305,13 +302,12 @@ body{
     </li>
 
     <li class="mobile-item">
-      <div class="mobile-label">Impact</div>
+      <div class="mobile-label">Goals</div>
       <div class="mobile-submenu">
-        <a href="">Cases</a>
-        <a href="">Awards</a>
+                <a href="pages/carbonreduction.php">Reduction of CO2</a>
+        <a href="pages/planttrees.php">Planing Trees</a>
       </div>
     </li>
-
   </ul>
 </nav>
 
