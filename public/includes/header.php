@@ -228,9 +228,6 @@ body{
     <li class="nav-item" id="navProject">
       Project
       <div class="nav-dropdown" id="dropdownProject">
-        <a href="">Overview</a>
-        <a href="">Timeline</a>
-        <a href="">Team</a>
         <a href="pages/achievement.php">Achievements</a>
       </div>
     </li>
@@ -238,10 +235,7 @@ body{
     <li class="nav-item" id="navResources">
       Resources
       <div class="nav-dropdown" id="dropdownResources">
-        <a href="">Docs</a>
-        <a href="">Downloads</a>
-        <a href="">Tutorials</a>
-        <a href="">API</a>
+        <a href="https://en.wikipedia.org/wiki/Sustainable_Development_Goals">Docs</a>
       </div>
     </li>
 
